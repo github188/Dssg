@@ -1,0 +1,366 @@
+<style>
+	.datasourceContent .active, .tableBlock .active{
+		background-color:#00bfff;
+		color:#fff;
+	}
+	.datasourceContent{
+		background: #eee;
+		overflow-y: auto;
+		border: 1px solid #333;
+		height: 300px;
+		padding:8px;
+	}
+	.selectResource,.selectSQL{
+		margin: 20px auto;
+		display: block;
+	}
+	.showContent{
+		margin: 10px 0;
+		overflow: auto;
+	}
+	.sqlContent{
+		width: 100%;height: 130px;float: left;
+	}
+	.vagueMatch{
+		margin: 0 auto;
+		display: block;
+	}
+	.inputParams th:nth-child(1),
+	.inputParams th:nth-child(5){
+		width: 20%;
+		padding:10px;
+	}
+	.inputParams th:nth-child(2),
+	.inputParams th:nth-child(3),
+	.inputParams th:nth-child(4),
+	.inputParams th:nth-child(6),
+	.inputParams th:nth-child(7),
+	.inputParams th:nth-child(8){
+		width: 10% !important;
+		padding:10px;
+	}
+	.outParameterJson{
+		min-width: 150px;
+		width: auto;
+	}
+	ul li{
+		overflow:hidden;
+	    text-overflow:ellipsis;
+	    white-space:nowrap
+	}
+	.fbyl td{
+		width: 25%;
+	}
+	.addDataEx{
+		padding: 4px 16px ;display:block;margin: 0 auto;
+	}
+	.delDataEx{
+		padding: 4px 16px ;display:block;margin: 5px auto;
+	}
+</style>
+<link href="../css/need/select2.min.css" rel="stylesheet" type="text/css">
+<div class="res-check-common">
+	<div class="ui-box">
+		<div class="ui-steps blue" id="ui-steps" style="width:900px;"></div>
+	</div>
+	<div id="content1" class="hidden ui-gridbar">
+		<table id="publishResource" class="ui-grid" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th></th>
+					<th>数据源名称</th>
+					<th>IP地址</th>
+					<th>端口</th>
+					<th>数据源类型</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<div id="content2" class="hidden">
+		<div class="showDatasourceTable" style="width:97%;margin: 20px 0;overflow: auto;">
+			<div class="ui-grid-buttonbar diary selectTab">
+				<ul class="ui-grid-linkGroup">
+					<li class="active showDataTable" key="0">选择表模式</li>
+					<li key="1" class="selectSQL">SQL脚本模式</li>
+				</ul>
+			</div>
+			<!--图形编辑界面-->
+			<div class="graphicsEditor" style="top:90px">
+				<button class="btn btn-info selectResource">选择数据表</button>
+			</div>
+			<!--SQL脚本模式-->
+			<div class="sqlScriptMode" style="display:none;">
+				<div style="height: 130px;margin-bottom: 10px;">					
+					<textarea class="sqlContent" name=""></textarea>
+				</div>
+				<div>
+					<button class="btn btn-info checkSQL" style="float: right;">应用SQL</button>
+					<!--<button class="btn btn-info testSql" style="float: right;margin-right: 10px;">测试SQL</button>-->
+				</div>
+			</div>
+		</div>
+		<div style="width:100%">
+			<table class="ui-grid inputParams showDatasourceTable" cellspacing="0" style="width: 100%" >
+				<thead>
+					<tr>
+						<th>数据项名称</th>
+						<th>英文名称</th>
+						<th>数据项类型</th>
+						<th>数据长度</th>
+						<th>字段名称</th>
+						<th>字段类型</th>
+						<th>数据来源</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody><tr class="odd"><td valign="top" colspan="7" class="dataTables_empty">表中数据为空</td></tr></tbody>
+			</table>
+		</div>
+	</div>
+	<div id="content3" class="hidden checkRes">
+		<div class="part1 mb-25 dataChange" style="width: 97%;">
+			<div style="width: 27%;float: left;">
+				<p>数据项</p>
+				<div>
+					<select name="" id="datasourceList" class="form-control">
+						<option value="*">请选择</option>
+					</select>
+				</div>
+				<div style="height: 30px;line-height: 30px;" > <span><input type="checkbox" class="switchExec"/><label for="">启用转换</label></span><span><input type="checkbox" disabled="true" class="execCode"/><label for="">转换成对应编码</label></span></div>
+				<div class="datasourceContent datasource1">
+					<ul></ul>
+				</div>
+			</div>
+			<div style="width: 10%;float: left;margin-top: 30%;"> <button class="vagueMatch btn btn-info">模糊匹配</button></div>
+			<div style="width: 27%;float: left;">
+				<p>数据字典</p>
+				<input class="form-control dictName" disabled="disabled"/>
+				<div class="datasourceContent datasource2" style="margin-top: 30px;">
+					<ul></ul>
+				</div>
+			</div>
+			<div style="width: 8%;float: left;margin-top: 28%;"> 
+				<button class="addDataEx btn btn-info" >添加</button>
+				<button class="delDataEx btn btn-info">移除</button>
+			</div>
+			<div style="width: 28%;float: left;">
+				<p>对应关系</p>
+				<input class="form-control mapping" disabled="disabled"/>
+				<div class="datasourceContent datasource3" style="margin-top: 30px;">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content4" class="hidden">
+		<div class="part1 mb-25">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">配置快照</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire" >
+					<tr>
+						<td class="title" width="25%">是否使用快照</td>
+						<td width="25%">
+							<select name="snapUsed" id="" class="form-control snapUsed">
+								<option value="-1">否</option>
+								<option value="0">是</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="part1 mb-25">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">配置同步类型</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire" >
+					<tr>
+						<td class="title" width="25%">类型模式</td>
+						<td width="25%">
+							<select name="syncMethod" id="" class="form-control syncMethod">
+								<option value="1">触发器同步</option>
+								<option value="2">时间戳同步</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="part1 mb-25 timestampList" style="display: none;">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">时间戳列表</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire" >
+					<tr>
+						<td class="title" width="25%">表名</td>
+						<td class="timestampsyncTablename" width="25%">eeeee</td>
+						<td class="title" width="25%">列名</td>
+						<td width="25%">
+							<select name="" id="timestampField" class="form-control">
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="content5" class="hidden">
+		<div class="part1 mb-25">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">配置更新策略</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire sensitive_word_filter" >
+					<tr>
+						<td class="title" width="25%">调度模式</td>
+						<td width="25%">
+							<select name="dispatchType" id="" class="form-control dispatchType">
+								<option value="1">周期模式</option>
+								<option value="2">定期模式</option>
+								<option value="3">触发器模式</option>
+							</select>
+						</td>
+					</tr>
+					<tr class="periodicMode">
+						<td class="title" width="25%">开始时间</td>
+						<td width="25%"><input class="form-control beginTime" type="text" name="beginTime" role="{required:true,length:'50'}"/></td>
+					</tr>
+					<tr class="periodicMode">
+						<td class="title" width="25%">间隔周期</td>
+						<td width="25%">
+							<div style="width: 70%;float: left;">
+								<input class="form-control cycle" type="text" name="cycle" role="{required:true,length:'50'}"/>
+							</div>
+							<div style="width: 30%;float: left;">
+								<select name="dateTypeMin" id="" class="form-control dateTypeMin">
+									<option value="1">时</option>
+									<option value="2">分</option>
+									<option value="3">秒</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr class="regularMode" style="display: none;">
+						<td class="title" width="25%">间隔周期</td>
+						<td width="25%">
+							<div style="width: 40%;float: left;">
+								<select name="dateTypeMax" id="" class="form-control dateTypeMax">
+									<option value="1">每月</option>
+									<option value="2">每周</option>
+									<option value="3">每日</option>
+								</select>
+							</div>
+							<div style="width: 60%;float: left;">
+								<div style="width: 33.3%;float: left;">
+									<div style="width: 60%;float: left;">
+										<input type="text" name="day" class="form-control day" role="{required:true,length:'50'}"/>
+									</div>
+									<div style="width: 40%;float: left;line-height: 28px;">天</div>
+								</div>
+								<div style="width: 33.3%;float: left;">
+									<div style="width: 60%;float: left;">
+										<input name="hour" type="text" class="form-control hour" role="{required:true,length:'50'}"/>
+									</div>
+									<div style="width: 40%;float: left;line-height: 28px;">时</div>
+								</div>
+								<div style="width: 33.3%;float: left;">
+									<div style="width: 60%;float: left;">
+										<input name="second" type="text" class="form-control second" role="{required:true,length:'50'}"/>
+									</div>
+									<div style="width: 40%;float: left;line-height: 28px;">分</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div style="margin-top: 10px;" class="showNotes">
+					<p key="1" >说明：周期模式从一个指定时间开始，按照指定的时间间隔更新数据（如每隔5分钟更新一次数据）</p>
+					<p key="2" style="display: none;">说明：定期模式指从一个指定时间开始，按照指定周期（日、周、月）更新数据的策略（如每月1日0时定期更新数据）</p>
+					<p key="3" style="display: none;">说明：从任务开始时间开始，只要有数据变化，立刻更新数据的策略</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content6" class="hidden">
+		<div class="part1 mb-25" style="width: 97%;">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">查看编目申请</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire sensitive_word_filter fbyl " >
+					<tr>
+						<td class="title">编目单位</td>
+						<td class="companyName"></td>
+						<td class="title">编目节点</td>
+						<td class="equipmentName"></td>
+					</tr>
+					<tr>
+						<td class="title">联系人</td>
+						<td class="linkman"></td>
+						<td class="title">联系电话</td>
+						<td class="phone"></td>
+					</tr>
+					<tr>
+						<td class="title">资源域</td>
+						<td class="doMainName"></td>
+						<td class="title">资源目录</td>
+						<td class="catalogName"></td>
+					</tr>
+					<tr>
+						<td class="title">资源类型</td>
+						<td class="resType"></td>
+						<td class="title">提交审批时间</td>
+						<td class="createTime"></td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+		<div class="part1 mb-25" style="width: 97%;">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">数据预览</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div style="width: 100%;overflow: auto;" class="sjylContainer">
+				<table class="ui-grid-wire sjyl" >
+					<thead>
+						<tr></tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<input type="text" class="hidden dbJson"/>
+	<input type="text" class="hidden sqltables"/>
+	
+</div>
+
+<script>
+	var grid=null, grid1=null, grid2=null, grid3=null, grid4=null;
+	require(["app/resourceManage/publishResource/publishResource-publish-db"],function(app){
+		app.main();
+	})
+</script>

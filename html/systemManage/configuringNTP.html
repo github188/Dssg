@@ -1,0 +1,48 @@
+<!--配置NTP-->
+<style>
+	.top{
+		padding-left: 100px;
+	}
+	.paddingLR{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.width100{
+		width: 100% !important;
+	}
+	.width60{
+		width: 60% !important;
+	}
+	.pr0{
+		padding-right:0 ;
+	}
+</style>
+<link href="../css/need/select2.min.css" rel="stylesheet" type="text/css">
+<div class="ui-content">
+	<div class="setMarginTop" style="height: 200px;margin-top:15%" >
+		<form class="ui-searchbar-form form-inline top col-md-5 pr0"id="NTP-form">
+			<div class="form-group width100">
+			    <label for="name">NTP服务器地址：</label>
+			     <select class="form-control select2 width60" id="ntp" name="ntp">
+			     </select>
+	        </div>
+	        
+		</form>
+		<div class="ui-searchbar-buttonbar top paddingLR col-md-2" >
+			<button class="btn btn-info search">提交</button>
+		</div>
+		<br />
+		<br />
+		<br /><br />
+		<div class="top col-md-12">
+			<p><label for="" class="sbtbsuc" style="display: none;">本设备在与“<span>20.125.20.21</span>”进行同步时同步成功</label></p>
+			<p><label for="" class="sbtberr" style="display: none;">本设备在与“<span>20.125.20.21</span>”进行同步时同步失败</label></p>
+			<p><label for="" class="tbsj">最近同步时间：<span>2017-8-8:17:50</span></label></p>
+		</div>
+	</div>
+</div>
+<script>
+	require(["app/systemManage/configuringNTP/configuringNTP"],function(app){
+		app.main();
+	});
+</script>

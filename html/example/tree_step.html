@@ -1,0 +1,149 @@
+<div class="ui-box">
+	<div class="ui-steps blue" id="ui-steps" style="width:800px;"></div>
+</div>
+<div id="content1" class="hidden">
+	<form id="form1" class="ui-form" role="form">
+		<div class="form-group col-md-6">
+			<label for="name">联系人</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="username" class="form-control" placeholder="请输入..." role="{required:true}"/>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">资源类型</label>
+			<div class="ui-form-inputGroup">
+				<select class="form-control" name="resType" role="{required:true}">
+			    	<option value="-1">*请选择*</option>
+			    	<option value="1">数据库</option>
+			    	<option value="2">文件</option>
+			    	<option value="3">API</option>
+			    </select>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">编目原因</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="reason" class="form-control" placeholder="请输入..."/>
+			</div>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">联系电话</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="telephone" class="form-control" placeholder="请输入..."/>
+			</div>
+		</div>
+		  
+	</form>
+</div>
+<div id="content2" class="hidden">
+	<form id="form2" class="ui-form" role="form">
+		<div class="form-group col-md-6">
+			<label for="name">资源名称</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="resName" class="form-control" placeholder="请输入..." role="{required:true}"/>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">资源英文名</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="resEnName" class="form-control" placeholder="请输入..." role="{required:true}"/>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">资源编码</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="resCode" class="form-control" placeholder="请输入..." role="{required:true}"/>
+			</div>
+			<span class="required"></span>
+		</div>
+		  
+		<div class="form-group col-md-6">
+			<label for="name">资源等级</label>
+			<div class="ui-form-inputGroup">
+				<select class="form-control" name="resLevel" role="{required:true}">
+					<option value="-1">*请选择*</option>
+					<option value="1">部分共享</option>
+					<option value="2">完全共享</option>
+				</select>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">资源摘要</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="resSummary" class="form-control" placeholder="请输入..." role="{required:true}"/>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">更新周期</label>
+			<div class="ui-form-inputGroup">
+				<input type="text" name="period" class="form-control" placeholder="请输入..." role="{required:true}"/>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">主题分类</label>
+			<div class="ui-form-inputGroup">
+				<select class="form-control" name="ztType" role="{required:true}">
+					<option value="-1">*请选择*</option>
+					<option value="1">部分共享</option>
+					<option value="2">完全共享</option>
+				</select>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">行业分类</label>
+			<div class="ui-form-inputGroup">
+				<select class="form-control" name="hyType" role="{required:true}">
+					<option value="-1">*请选择*</option>
+					<option value="1">民政服务</option>
+					<option value="2">服务业</option>
+					<option value="3">批发与零售业</option>
+					<option value="4">信息技术服务业</option>
+				</select>
+			</div>
+			<span class="required"></span>
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="name">图片</label>
+			<div class="ui-form-inputGroup">
+				<button class="btn btn-info" onclick="return false" id="imageBtn"><i class="fa fa-folder-open" style='margin-right:4px;'></i>选择...</button>
+				<input type="file" id="image" name="image" style="display:none" class="form-control"/><span id="fileName"></span>
+			</div>
+			
+		</div>
+	</form>
+</div>
+<div id="content3" class="hidden">
+	<button class="btn btn-link" id="addRow"><i class="fa fa-plus"></i>添加</button>
+	<table id="step_table" class="ui-grid display" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+				<th>数据项名称</th>
+				<th>数据项英文名称</th>
+				<th>数据项编码</th>
+				<th>数据项类型</th>
+				<th>数据项长度</th>
+				<th>数据元标识符</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+	</table>
+</div>
+<div id="content4" class="hidden">dddd</div>

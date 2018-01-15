@@ -1,0 +1,10 @@
+[
+	{"fid":1,"readonly":true,"label":"用户名","name":"user","value":"李四","type":"text","role":{"required":true,"length":90}},
+	{"fid":2,"label":"学历","name":"xueli","type":"select","role":{"required":true}},
+	{"fid":3,"disabled":true,"label":"爱好","name":"aihao","type":"checkbox","role":{"required":true},"data":[{"key":"唱歌","value":1,"selected":true},{"key":"看书","value":2,"selected":true},{"key":"篮球","value":3}]},
+	{"fid":4,"label":"用户id","name":"userId","type":"hidden","value":"0129828"},
+	{"fid":6,"readonly":true,"label":"时间","value":"2017-08-15","type":"date","name":"date"},
+	{"fid":7,"disabled":true,"label":"上传","type":"file","name":"file","id":"file"},
+	{"fid":5,"label":"自我介绍","name":"info","type":"textarea","columnSize":3,"value":"sldflsdlflsdfdslfl","style":"height:100px"},
+	{"fid":8,"label":"备注","type":"view","value":"helloworld!"}
+]

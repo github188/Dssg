@@ -1,0 +1,52 @@
+<style type="text/css">
+	#form table.ui-grid-wire tbody td{
+		width: 25% ;
+	}
+</style>
+<form id="form" class="ui-form" role="form">
+	<div class="ui-page-box-content">
+		<div class="ui-page-content">
+			<table class="ui-grid-wire">
+				<tbody>
+					<tr>
+						<td class="title" style="width:20%"><span class="required"></span>用户名</td>
+						<td>
+							<input type="text" name="loginName" class="form-control username" placeholder="请输入用户名" role="{required:true,length:'50'}"/>
+						</td>
+						<td class="title" style="width:20%"><span class="required"></span>用户实名</td>
+						<td>
+							<input type="text" name="userName" class="form-control realName" placeholder="请输入用户实名" role="{required:true,length:'50'}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%"><span class="required"></span>用户角色</td>
+						<td>
+							<select type="text" class="userRole form-control" name="roleId" placeholder="请输入用户角色" role="{required:true}"/>
+	   						</select>
+						</td>
+						<script type="text/x-handlebars-template" id="userRole-tpl">
+					 		{{#each this}}
+					 			<option value={{this.id}}>{{text}}</option>
+					 		{{/each}}
+					    </script>
+						<td class="title" style="width:20%">用户手机</td>
+						<td>
+							 <input type="text" name="telphone" class="form-control mobile" placeholder="请输入用户手机" role="{mobile:true,length:'50'}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%">邮箱</td>
+						<td>
+							<input type="text" name="email" class="form-control email" placeholder="请输入邮箱" role="{email:true,length:'50'}"/>
+						</td>
+						<td class="title" style="width:20%">用户办公电话</td>
+						<td>
+							<input type="text" name="cellPhoneNumber" class="form-control telephone" placeholder="请输入办公电话" role="{telephone:true,length:'500'}"/>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<input name="id" type="hidden">
+</form>

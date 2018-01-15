@@ -1,0 +1,83 @@
+<style>
+	/*fieldset{
+	    padding:.35em .625em .75em ;
+	    margin:0 2px;
+	    border:1px solid silver;
+    }
+	legend{
+	    padding:.5em;
+	    border:0;
+	    width:auto;
+	    font-size:14px;
+	    margin-bottom:0;
+	    }
+	.authorization-box{
+		width:80%;
+		margin: 0 auto;
+	}    
+	.upload-file .btn-file,
+	.upload-file .fileinput-remove,
+	.upload-file .fileinput-upload{
+		height: 28px;
+    	line-height: 17px;
+	}
+	.upload-file .file-caption-name{
+		line-height:26px
+	}
+	.img-box{
+		width:505px;
+		height:286px;
+		position:relative;
+		margin:0 auto;
+		
+	}
+	.authorization-msg{
+		position:absolute;
+		top:90px;
+		right:80px
+	}
+	.authorization-msg div{
+		margin:8px 0
+	}
+	.color-6c5804{
+		color:#6c5804
+	}
+	.authorization-msg label{
+		font-weight:600
+	}*/
+</style>
+<link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css" class='link'/>
+<div class="authorization-box">
+	<div class="img-box">
+		<img src="../images/un_authorization.jpg" style="display:block;margin:10px auto;" id="authorImg">
+		<div class="authorization-msg" style="display:none">
+			<div class="color-6c5804"><label>授权单位：</label><span class="company">****</span></div>
+			<div class="color-6c5804"><label>授权有效期：</label><span class="expireDate">****</span></div>
+			<div><span>激活时间：</span><span class="authDate">****</span></div>
+			<div><span>当前版本：</span><span class="currentVersion">****</span></div>
+		</div>
+	</div>
+	<form>
+		<fieldset>
+		    <legend>下载设备特征信息</legend>
+		  	<p>特征文件：包含所使用设备的特征信息。<a class="btn btn-default load">下载</a></p>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+		    <legend>上传系统授权文件</legend>
+		    <div>
+		    	<div style="float:left;width:80px"><span>授权文件：</span></div>
+		    	<div style="float:left;width:400px" class="upload-file"></div>
+		    	<!--<input type="text" cxlass="form-control" style="width:200px">
+		    	<button class="btn btn-default">浏览</button>
+		    	<button class="btn btn-default uploadMsg">上传</button>-->
+	    </div>
+		</fieldset>
+	</form>
+</div>
+<!--<script>
+	require(["app/authorizationApp"],function(authorization){
+		authorization.main();
+	});
+</script>-->

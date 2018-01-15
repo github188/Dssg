@@ -1,0 +1,42 @@
+<div class="ui-content">
+	<div class="ui-aside left" id="treeAside">
+		<ul class="ztree ui-treebar" id="treebar"></ul>
+	</div>
+	<div class="ui-aside right" id="cr">
+		
+		<div class="ui-grid-buttonbar">
+			<ul class="ui-grid-buttonGroup left">
+				<li><button class="btn btn-link add"><i class="fa fa-plus"></i><span>新增</span></button></li>
+				<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+				<li><button class="btn btn-link modify disabled"><i class="fa fa-edit"></i><span>修改</span></button></li>
+			</ul>
+			<ul class="ui-grid-buttonGroup right">
+				<li><button class="btn btn-link import"><i class="fa fa-download"></i><span>导入</span></button></li>
+				<li><button class="btn btn-link export"><i class="fa fa-upload"></i><span>导出</span></button></li>
+			</ul>
+		</div>
+		
+		<div class="ui-gridbar">
+			<table id="example" class="ui-grid display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th><input type="checkbox" id="cball"/></th>
+						<th>name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+			</table>
+			<input type="hidden" id="primaryKey"/>
+		</div>
+		
+	</div>
+</div>
+<input type="hidden" id="currentTreeId"/>
+<script>
+	require(["app/example/treeApp"],function(app){
+		app.main();
+	});
+</script>

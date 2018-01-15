@@ -1,0 +1,57 @@
+<form id="form" class="ui-form" role="form">
+	
+	  <div class="form-group col-md-6">
+	    <label for="name">资源IP</label>
+	    <div class="ui-form-inputGroup">
+				<input type="text" name="ip" class="form-control" placeholder="请输入IP" role="{required:true}"/>
+			</div>
+			<span class="required"></span>
+	  </div>
+	  
+	<div class="form-group col-md-6">
+	    <label for="name">资源厂商</label>
+	    <div class="ui-form-inputGroup">
+		    <select class="form-control" name="company" role="{required:true}">
+		    	<option value="-1">*请选择*</option>
+		    	<option value="1">华为</option>
+		    	<option value="2">思科</option>
+		    	<option value="3">甲骨文</option>
+		    </select>
+	    </div>
+	    <span class="required"></span>
+	  </div>
+
+	  <div class="form-group col-md-12">
+	    <label for="name">资源名称</label>
+	    <div class="ui-form-crGroup">
+	    	<input type="checkbox" value="1" name="cg" role="{required:true}"/>服务器
+	    	<input type="checkbox" value="2" name="cg"/>交换机
+	    	<input type="checkbox" value="3" name="cg"/>虚拟机
+	    	<input type="checkbox" value="4" name="cg"/>终端设备
+	    	<input type="checkbox" value="5" name="cg"/>移动设备
+	    </div>
+	    <span class="required"></span>
+	  </div>
+	  
+	  <div class="form-group col-md-12">
+	    <label for="name">告警等级</label>
+	    <div class="ui-form-crGroup">
+	    	<input type="radio" value="1" name="rg"/>紧急
+	    	<input type="radio" value="2" name="rg"/>严重
+	    	<input type="radio" value="3" name="rg"/>一般
+	    	<input type="radio" value="4" name="rg"/>未知
+	    </div>
+	  </div>
+	  
+	  <div class="form-group col-md-12">
+	    <label for="name">资源厂商</label>
+	    <textarea class="form-control" name="detail" style="width:450px;"></textarea>
+	  </div>
+	  
+</form>
+
+<script>
+	require(["app/example/grid_AddApp"],function(app){
+		app.main();
+	});
+</script>

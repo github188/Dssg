@@ -1,0 +1,61 @@
+<!--表格搜索区域-->
+<div class="ui-searchbar" style="height:66px;">
+	<form class="ui-searchbar-form form-inline" id="search-form" style="width:100%;"> 
+		  <div class="form-group">
+		    <label for="name" style="margin-left: -50px;">模块</label>
+		    <select class="form-control" name="moduleCode">
+		    	<option value="*">全部</option>
+		    	<option value="LOGIN_MANAGE">登录</option>
+		    	<option value="RESOURCE_PORTAL">资源门户</option>
+		    	<option value="CATALOG_MANAGE">编目管理</option>
+		    	<option value="RESOURCE_MANAGE">资源管理</option>
+		    	<option value="NETWORK_MANAGE">组网管理</option>
+		    	<option value="LOG_AUDIT">日志审计</option>
+		    	<option value="SYSTEM_MONITORING">系统监控</option>
+		    	<option value="SYSTEM_MANAGE">系统管理</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="name">时间范围</label>
+		    <input type="text" class="form-control date" id="start_date" style="width:300px;" name="timeLi" placeholder="时间范围">
+		  </div>
+		 
+		  <div class="form-group">
+		    <label for="name">操作结果</label>
+		    <select class="form-control" id="operateReult" name="operateReult" style="width:150px;">
+		    	<option value="*">全部</option>
+		    	<option value="true">成功</option>
+		    	<option value="false">失败</option>
+		    </select>
+		  </div>
+		  <!--<div class="form-group">
+		  	<button class="btn btn-info" id="search">查询</button>
+			<button class="btn btn-warning" id="reset">重置</button>
+		  </div>-->
+	</form>
+	<div class="ui-searchbar-buttonbar">
+		<button class="btn btn-info" id="search">查询</button>
+		<button class="btn btn-warning" id="reset">重置</button>
+	</div>
+</div>
+<div class="ui-content" style="top:76px;">
+	<div class="ui-gridbar" style="top: 0;">
+		<table id="example" class="ui-grid" cellspacing="0" width="100%">
+			<thead>						
+				<tr>
+					<th>模块</th>
+					<th>操作</th>
+					<th>操作人</th>
+					<th>操作IP</th>
+					<th>时间</th>
+					<th>结果</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<script>
+	require(["app/diaryAudit/operateDiary"],function(app){
+		app.main();
+	});
+</script>

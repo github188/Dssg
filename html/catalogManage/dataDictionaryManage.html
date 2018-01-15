@@ -1,0 +1,55 @@
+<div class="ui-content dataDictionary" style="top:3px;">
+	<div class="ui-aside left" id="treeAside">
+		<ul class="ztree ui-treebar" id="treebar"></ul>
+	</div>
+	<div class="ui-aside right" id="rightPage">
+		<div class="ui-searchbar">
+			<form class="ui-searchbar-form form-inline" id="search-form">
+				<div class="form-group">
+				    <label for="name">字典项名称</label>
+				    <input type="text" name="name" class="form-control" placeholder="请输入字典项名称">
+				</div>
+				<div class="form-group">
+				    <label for="name">字典项编码</label>
+				    <input type="text" name="code" class="form-control" placeholder="请输入字典项编码">
+				</div>
+			</form>
+			<div class="ui-searchbar-buttonbar">
+				<button class="btn btn-info" id="search">查询</button>
+				<button class="btn btn-warning" id="reset">重置</button>
+			</div>
+		</div>
+		<div class="ui-grid-buttonbar">
+			<ul class="ui-grid-buttonGroup left">
+				<li><button class="btn btn-link adds"><i class="fa fa-plus"></i><span>新增</span></button></li>
+				<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+				<li><button class="btn btn-link modify disabled"><i class="fa fa-pencil"></i><span>修改</span></button></li>
+			</ul>
+			<ul class="ui-grid-buttonGroup right">
+				<li><button class="btn btn-link import"><i class="fa fa-arrow-down"></i><span>导入</span></button></li>
+				<li><button class="btn btn-link export"><i class="fa fa-arrow-up"></i><span>导出</span></button></li>
+			</ul>
+		</div>
+		<div class="ui-gridbar" style="top:110px;">
+			<table id="example" class="ui-grid" cellspacing="0" width="100%">
+				<thead>
+					<tr>		
+						<th><input type="checkbox" id="cball"/></th>
+						<th>字典项</th>
+						<th>字典编码</th>
+						<th>描述</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+</div>
+<input type="hidden" id="currentTreeId"/>
+<div class="dataDictionaryFile">
+	<input type="file" name="file" id="file" value="" style="display: none;"/>
+</div>
+<script>
+	require(["app/catalogManage/dataDictionaryManage"],function(app){
+		app.main();
+	});
+</script>

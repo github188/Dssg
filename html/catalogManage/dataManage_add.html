@@ -1,0 +1,98 @@
+<form id="form" class="ui-form" role="form">
+		<div class="ui-page-box-content">
+			<div class="ui-page-content">
+				<table class="ui-grid-wire">
+					<tbody>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>数据元名称</td>
+							<td>
+								<input type="text" name="name" class="form-control" placeholder="数据元名称" role="{required:true,length:100}" id="data_name"/>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>数据元英文名称</td>
+							<td>
+								<input type="text" name="englishName" class="form-control" placeholder="数据元英文名称" role="{required:true,filter:true,length:100}" id="data_english_name"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>数据元编码</td>
+							<td>
+								<input type="text" name="code" class="form-control" placeholder="数据元编码" role="{required:true,en:true,en_number:true,length:200}" id="data_code"/>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>数据元分类</td>
+							<td>
+								<select class="form-control" name="classify" role="{required:true}" id="data_classify">
+		    					</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>数据类型</td>
+							<td>
+								<select class="form-control" name="dataType" id="data_type">
+							    	<option value="12">文本</option>
+							    	<option value="3">数字</option>
+							    	<option value="91">日期</option>
+							    	<option value="93">时间</option>
+							    	<option value="4">整型</option>
+							    	<option value="2004">大字段</option>
+							    </select>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>提交单位</td>
+							<td>
+								<input type="text" name="submitCompany" id="submitCompany" class="form-control" placeholder="请输入提交单位" role="{required:true,length:100}"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%">是否字典项</td>
+							<td>
+								<select class="form-control" name="isDictionary" id="isDictionary">
+							    	<option value="1">否</option>	
+							    	<option value="0">是</option>
+							    </select>
+							</td>
+							<td class="title" style="width:20%">值域</td>
+							<td>
+								<input type="text" name="valueScope" class="form-control" placeholder="请输入值域" role="{length:100}"/>
+							</td>
+						</tr>
+						<tr>							
+							<td class="title" style="width:20%"><span class="required"></span>提交人</td>
+							<td>
+								<input type="text" name="submitUser" id="submitUser" class="form-control" placeholder="请输入提交人" role="{required:true,length:36}"/>
+							</td>
+							<td class="title" style="width:20%"></span>版本日期</td>
+							<td>
+								<input type="text" name="versionDate" class="form-control date"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>版本号</td>
+							<td>
+								<input type="text" name="versionNumber" class="form-control" placeholder="请输入版本号" role="{required:true,number:true,length:10}"/>
+							</td>
+							<td class="title" style="width:20%"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="title data_length" style="width:20%"><span class="required"></span>数据长度</td>
+							<td class="data_length">
+								<input type="text" name="dataLength" class="form-control data_length" placeholder="请输入数据长度" role="{required:true,int:true}" id="data_length"/>
+							</td>
+							<td class="title user_dictionary" style="width:20%"><span class="required"></span>用户字典</td>
+							<td class="user_dictionary">
+								<select class="form-control user_dictionary" name="dictionaryId" role="{required:true}"/ id="dictionaryId">	
+							    </select>
+							</td>
+							<input type="hidden" name="id"/>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	</div>
+
+
+</form>
+<script>
+	require(["app/catalogManage/dataManage_add"],function(app){
+		app.main();
+	});
+</script>

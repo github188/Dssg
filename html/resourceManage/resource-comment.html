@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DSSG</title>
+		<link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/autoSelect.css" rel="stylesheet" type="text/css">
+		<link href="../../css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+		<link href="../../css/style.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/moduleStyle.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/resourceStyle.min.css" rel="stylesheet" type="text/css">
+		<script src="../../js/lib/require.js"></script>
+		<script src="../../js/lib/config.js"></script>
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="../../css/font-awesome-ie7.min.css">
+		<![endif]-->
+		<!--[if lte IE 6]>
+	      <link rel="stylesheet"ac type="text../../css" href="../../css/bootstrap-ie6-min.css">
+	      <![endif]-->
+		<!--[if lte IE 7]>
+	      <link rel="stylesheet" type="text../../css" href="../../css/ie.css">
+	      <![endif]-->
+		<!--[if lt IE 9]>
+	        <script src="../../js/lib/html5shiv.min.js"></script>
+	        <script src="../../js/lib/respond.min.js"></script>
+	    <![endif]-->
+		<!--[if lte IE 6]>
+	        <script type="text/javascript" src="../../js/lib/bootstrap-ie.js"></script>
+	    <![endif]-->
+		<!--[if IE]>  
+	        <script type="text/javascript" src="../../js/lib/excanvas.compiled.js"></script>  
+	    <![endif]-->
+	    <style>
+	    	body{
+	    		background-color:#fff;
+	    	}
+	    	td{
+	    		vertical-align: middle !important;
+	    	}
+	    	.comment-content .fa{
+	    		color:#d6d3d3;
+	    		font-size:20px;
+	    	}
+	    	.light-star-hover{
+	    		color:#efb336 !important;
+	    	}
+	    	.light-star-click{
+	    		color:#efb336 !important;
+	    	}
+	    	#commentTotal .fa{
+	    		color:#d6d3d3 !important;
+	    	}
+	    	#commentTotal .light{
+	    		color:#efb336 !important;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div class="ui-page-container">
+			<div class="ui-header" style="left: 0;">
+				<div class="ui-logo" style="text-align: center;"><img src="../../images/logo1.png"/></div>
+				<div class="ui-logo-text"></div>
+				<div class="ui-navbar">
+					<ul>
+						<!--<li>
+							<div class="ui-searchInput">
+								<input id="searchInput" type="text" class="form-control"/>
+								<i class="fa fa-search" id="searchIcon"></i>
+							</div>
+						</li>-->
+						<li class="portal"><a target="_blank" title="门户首页"><i class="fa fa-home"></i><span>门户</span></a></li>
+						<li class="message">
+							<div class="btn-group">
+								<a title="消息" class="dropdown-toggle messageNumber" data-toggle="dropdown">
+									<i class="fa fa-envelope-o"></i><span>消息</span>
+								</a>
+								<ul class="dropdown-menu messageMenu" role="menu">
+							        <!--<li>
+							            <a href="#"><i class="fa fa-envelope-o"></i><b>[待办事务]</b> "科技厅DSSG"申请订阅[216文件跑数据],需要您审批。<span>(2017.08.16)</span></a>
+							        </li>
+							        <li class="divider" style="margin-top:0"></li>
+							        <li>
+							            <a href="#"><i class="fa fa-envelope-o"></i><b>[待办事务]</b> "科技厅DSSG"申请订阅[216文件跑数据],需要您审批。<span>(2017.08.16)</span></a>
+							        </li>
+							        <li class="divider" style="margin-top:0"></li>
+							        <li>
+							            <a href="#"><i class="fa fa-envelope-o"></i><b>[待办事务]</b> "科技厅DSSG"申请订阅[216文件跑数据],需要您审批。<span>(2017.08.16)</span></a>
+							        </li>
+							        <li class="divider" style="margin-top:0"></li>
+							        <li>
+							            <a href="#"><i class="fa fa-envelope-o"></i><b>[待办事务]</b> "科技厅DSSG"申请订阅[216文件跑数据],需要您审批。<span>(2017.08.16)</span></a>
+							        </li>
+							        <li class="divider" style="margin-top:0"></li>
+							        <li>
+							            <a href="#"><i class="fa fa-envelope-o"></i><b>[待办事务]</b> "科技厅DSSG"申请订阅[216文件跑数据],需要您审批。<span>(2017.08.16)</span></a>
+							        </li>-->
+							        <script  type="text/x-handlebars-template" id="message-tpl">
+							        	{{#each this.content}}
+							        	<li type={{type}}>
+							            	<a href="#"><i class="fa fa-envelope-o"></i><b>[{{mes}}]</b>
+							            		{{content}}<span>({{createTime}})</span></a>
+							        	</li>
+										{{/each}}
+										<li>
+							            	<a href="#" class="text-right">查看更多</a>
+							        	</li>
+							        </script>
+							    </ul>
+						   </div>
+						</li>
+						
+						<li class="user">
+							<div class="btn-group">
+								<a title="个人中心" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" style="font-size: 17px;"></i><span>个人中心</span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li style="padding:0 20px;font-size:12px;"><div><i class="fa fa-user" style="font-size:15px;margin-right:4px;"></i>欢迎，<span id="loginMan" style="color:#0090ff"></span></div></li>
+									<li class="divider" style="margin-top:0"></li>
+							        <!--<li>
+							            <a href="#">账户管理</a>
+							        </li>-->
+							        <li>
+							            <a href="#" class="authorization">关于授权</a>
+							        </li>
+							       
+							        <li class="divider"></li>
+							        <li>
+							            <a href="#" id="logOut">退出</a>
+							        </li>
+							    </ul>
+						   </div>
+						</li>
+						<!--<li class="help"><a title="帮助"><i class="fa fa-question"></i><span>帮助</span></a></li>-->
+					</ul>
+				</div>
+			</div>
+			<div class="ui-page-article"  style="height:90%;position:absolute;top:55px;margin-left:-600px;left:50%;bottom:10px">
+				<div class="ui-page-body">
+					<div class="ui-page-heading">详情</div>
+					<div class="ui-page-content">
+						
+						<div class="ui-page-box dotted">
+							<div class="ui-page-box-heading">基本信息</div>
+							<div class="ui-page-box-content" style="width:220px;text-align:center;">
+								<img src="" class="ui-page-headingImage" style="border-radius: 40px;"/>
+								<div class="ui-starbar starInfo"></div>
+								<div>综合评分<span class="assessmentNum"></span></div>
+							</div>
+							<div class="ui-page-box-content" style="width:898px;">
+									
+									<div class="ui-page-title">
+										<span class="resName"></span>
+										<ul>
+											<li>订阅用户：<span class="subscibeTotal"></span></li>
+											<li>下载数：<span class="downloadNum"></span></li>
+										</ul>
+									</div>
+									<div class="ui-page-content abstracts">
+									</div>
+									<div class="ui-page-content">
+										<table class="ui-grid-wire">
+											<tbody>
+												<tr>
+													<td class="title" style="width:20%">资源编码</td>
+													<td class="resCode"></td>
+													<td class="title" style="width:20%">资源英文名称</td>
+													<td class="resEname"></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">资源类型</td>
+													<td class="resType"></td>
+													<td class="title" style="width:20%">资源等级</td>
+													<td class="resLevel"></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">主题分类</td>
+													<td class="subjectCarategoryName"></td>
+													<td class="title" style="width:20%">行业分类</td>
+													<td class="industryCategoryName"></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">发布目录</td>
+													<td class="rdcName"></td>
+													<td class="title" style="width:20%">更新周期</td>
+													<td class="updateCycle"></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">发布时间</td>
+													<td class="publishTime"></td>
+													<td class="title" style="width:20%">最后更新时间</td>
+													<td class="updateTime"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+							</div>
+						</div>
+						<div class="ui-page-box comment-content">
+							<div class="ui-page-box-heading">用户评价</div>
+							<table class="ui-grid-wire" style="width:85%;margin:0 auto">
+								<tbody>
+									<tr>
+										<td style="width:20%;height:40px"><span class="required"></span>数据评分</td><td class="star" style="text-align:left"></td>
+									</tr>
+									<tr>
+										<td style="width:20%;vertical-align: middle;"><span class="required"></span>数据评价</td>
+										<td style="height:50px">
+											<textarea class="form-control" id="dataComment" rows="5" col="5" role=role="{required:true,length:200}"></textarea>
+											<div class="text-right surplus">还能输入<span>200</span>字</div>
+										</td>
+									</tr>
+								</tbody>
+								<tfooter>
+									<tr>
+										<td colspan=2><button class="btn btn-primary commit">提交</button></td>
+									</tr>
+								</tfooter>
+							</table>
+						</div>
+						<div class="ui-page-box">
+							<div class="ui-page-box-heading">评价总数</div>
+							<table class="ui-grid-wire" width="100%" id="commentTotal">
+								
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" value="true" id="appraisePage"/>
+		<script>
+			require(["app/resourceManage/subscribeResource-comment","app/mainApp"],function(app,main){
+				app.main();
+				main.main();
+			});
+		</script>
+	</body>
+</html>
+
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" />
+		<!--<title>贵州VPN跨越安全交换平台</title>-->
+		<title>DSSG</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/autoSelect.css" rel="stylesheet" type="text/css">
+		<link href="../css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../css/zTreeStyle/zTreeStyle.css" type="text/css">
+		<link href="../css/style.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/moduleStyle.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/resourceStyle.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/jquery.treetable.css" rel="stylesheet" type="text/css">
+		<link href="../css/fullcalendar.css" rel="stylesheet" type="text/css">
+		<link href="../css/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print'>
+		<script src="../js/lib/require.js"></script>
+		<script src="../js/lib/config.js"></script>
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="../css/font-awesome-ie7.min.css">
+		<![endif]-->
+		<!--[if lte IE 6]>
+	      <link rel="stylesheet"ac type="text../css" href="../css/bootstrap-ie6-min.css">
+	      <![endif]-->
+		<!--[if lte IE 7]>
+	      <link rel="stylesheet" type="text../css" href="../css/ie.css">
+	      <![endif]-->
+		<!--[if lt IE 9]>
+	        <script src="../js/lib/html5shiv.min.js"></script>
+	        <script src="../js/lib/respond.min.js"></script>
+	    <![endif]-->
+		<!--[if lte IE 6]>
+	        <script type="text/javascript" src="../js/lib/bootstrap-ie.js"></script>
+	    <![endif]-->
+		<!--[if IE]>  
+	        <script type="text/javascript" src="../js/lib/excanvas.compiled.js"></script>  
+	    <![endif]-->
+	</head>
+	<body>
+		<!--<div style="width:959px;height:30px;background:red;position:absolute;z-index:2000;left:0;top:97px"></div>-->
+		<div class="ui-container">
+				<div class="ui-menubar">
+					<div class="ui-logo">
+						<img src="../images/logo1.png"/>
+					</div>
+					<div class="ui-menu"></div>
+				</div>
+				<div class="ui-header">
+					<div class="ui-logo-text"></div>
+					<div class="ui-navbar">
+						<ul>
+							<!--<li>
+								<div class="ui-searchInput">
+									<input id="searchInput" type="text" class="form-control"/>
+									<i class="fa fa-search" id="searchIcon"></i>
+								</div>
+							</li>-->
+							<li class="portal"><a target="_blank" title="门户首页"><i class="fa fa-home"></i><span>门户</span></a></li>
+							<li class="message">
+								<div class="btn-group">
+									<a title="消息" class="dropdown-toggle messageNumber" data-toggle="dropdown">
+										<i class="fa fa-envelope-o"></i><span>消息</span>
+									</a>
+									<ul class="dropdown-menu messageMenu" role="menu">
+								        <script  type="text/x-handlebars-template" id="message-tpl">
+								        	{{#each this.content}}
+								        	<li type={{type}} mid={{menuClassification}}>
+								            	<a href="javascript:void(0)"><i class="fa fa-envelope-o"></i><b>[{{mes}}]</b>
+								            		{{content}}<span>({{createTime}})</span></a>
+								        	</li>
+											{{/each}}
+											<li>
+								            	<a href="javascript:void(0)" class="text-right">查看更多</a>
+								        	</li>
+								        </script>
+								    </ul>
+							   </div>
+							</li>
+							
+							<li class="user">
+								<div class="btn-group">
+									<a title="个人中心" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" style="font-size: 17px;"></i><span>个人中心</span></a>
+									<ul class="dropdown-menu" role="menu">
+										<li style="padding:0 20px;font-size:12px;"><div><i class="fa fa-user" style="font-size:15px;margin-right:4px;"></i>欢迎，<span id="loginMan" style="color:#0090ff"></span></div></li>
+										<li class="divider" style="margin-top:0"></li>
+								        <!--<li>
+								            <a href="#">账户管理</a>
+								        </li>-->
+								        <li>
+								            <a href="#" class="authorization">关于授权</a>
+								        </li>
+								       
+								        <li class="divider"></li>
+								        <li>
+								            <a href="#" id="logOut">退出</a>
+								        </li>
+								    </ul>
+							   </div>
+							</li>
+							<!--<li class="help"><a title="帮助"><i class="fa fa-question"></i><span>帮助</span></a></li>-->
+						</ul>
+					</div>
+				</div>
+				<div class="ui-location">
+					<div class="ui-location-label"><i class="fa fa-map-marker"></i></div>
+					<ul></ul>
+				</div>
+				<div class="ui-article"></div>
+				<div class="ui-footer">Copyright © 2016-2017 版权所有:江苏飞搏软件股份有限公司</div>
+				<!--用于判断按钮类型 1、修改-->
+				<input type="hidden" name="button_type" id="button_type" value="" />
+		</div>
+		<!--<div style="position: absolute;top: 0;left: 0;height:44px;width: 500px;background: #fff;z-index: 99;">
+			<img src="../images/loginVPN/LOGO.png" alt="" style="margin-left: 6px;margin-top: 2px;transform: scale(0.8);"/>
+		</div>-->
+		<script  type="text/x-handlebars-template" id="menu-tpl">
+			<div class="panel-group" id="menubar">
+				{{#each this}}
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#menubar" href="#collapse{{@index}}">
+									{{#if this.items}}
+									<i class="{{this.icon}}"></i>{{label}}
+									{{else}}
+									<span style="display: block; width:146px"><i style="margin-right:5px" class="{{this.icon}}"></i>{{label}}</span>
+									{{/if}}
+									{{#if this.items}}
+									<i attr="mt" class="fa fa-angle-down" style="float:right;font-size:12px;margin:15px 15px 0 0"></i>
+									{{/if}}
+								</a>
+								
+							</h4>
+						</div>
+						{{#if this.items}}
+						<div id="collapse{{@index}}" class="panel-collapse collapse {{#if active}}in{{/if}}">
+							<div class="panel-body">
+								<ul>
+									{{#each this.items}}
+										<li url="{{this.url}}" {{#if active}}class='active'{{/if}} mid="{{this.id}}">{{this.label}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+						{{/if}}
+					</div>
+				{{/each}}
+			</div>
+		</script>
+		<script>
+			var chartInterval= null;
+			var chartInterval2 = null;
+			var scopeMenuData = null;
+			require(["app/mainApp"],function(app){
+				
+				app.main();
+			});
+		</script>
+	</body>
+</html>

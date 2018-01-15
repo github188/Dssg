@@ -1,0 +1,52 @@
+<!--表格搜索区域-->
+<div class="ui-searchbar" style="height:60px;">
+	<form class="ui-searchbar-form form-inline" id="search-form">
+		  <div class="form-group">
+		    <label for="name">资源IP</label>
+		    <input type="text" name="ip" class="form-control" placeholder="请输入IP">
+		  </div>
+		  <div class="form-group">
+		    <label for="name">资源厂商</label>
+		    <select class="form-control" name="company">
+		    	<option value="-1">*请选择*</option>
+		    	<option value="1">华为</option>
+		    	<option value="2">思科</option>
+		    	<option value="3">甲骨文</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="name">资源名称</label>
+		    <input type="text" class="form-control" id="ip" placeholder="请输入名称">
+		  </div>
+		  <input type="hidden" id="status" name="status" value="0"/>
+	</form>
+	<div class="ui-searchbar-buttonbar">
+		<button class="btn btn-info" id="search">查询</button>
+		<button class="btn btn-warning" id="reset">重置</button>
+	</div>
+</div>
+<!--表格区域-->
+<div class="ui-content">
+	<div class="ui-grid-buttonbar">
+		<ul class="ui-grid-linkGroup">
+			<li class="active" key="0">全部</li>
+			<li key="1">待发布</li>
+			<li key="2">已发布</li>
+			<li key="3">已撤销</li>
+		</ul>
+	</div>
+	<div class="ui-gridbar">
+		<table id="example" class="ui-blockGrid" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<script>
+	require(["app/example/blockGridApp"],function(app){
+		app.main();
+	});
+</script>

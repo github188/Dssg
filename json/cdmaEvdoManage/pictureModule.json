@@ -1,0 +1,47 @@
+{
+	  "data": [
+		    {
+			      "type": "point",
+			      "id": 1,
+		        "name": "民政厅DSSG",
+		        "image": "square",
+		        "alarmState":1
+		    },
+		    {
+			      "type": "point",
+			      "id": 2,
+		        "name": "公安厅DSSG",
+		        "image": "circle",
+		        "alarmState":2
+		    },
+		     {
+			      "type": "point",
+			      "id": 4,
+		        "name": "江苏交通厅",
+		        "image": "circle",
+		        "alarmState":2
+		    },
+		    {
+			      "type": "line",
+			      "id": 3,
+	      		"lineType":1,
+	        	"startId": 1,
+	        	"endId":  2
+		    },
+		    {
+			      "type": "line",
+			      "id": 3,
+	      		"lineType":1,
+	        	"startId": 4,
+	        	"endId":  1
+		    },
+		    {
+			      "type": "line",
+			      "id": 3,
+	      		"lineType":1,
+	        	"startId": 2,
+	        	"endId":  4
+		    }
+		    
+   	]
+}

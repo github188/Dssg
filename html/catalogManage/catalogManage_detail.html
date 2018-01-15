@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/autoSelect.css" rel="stylesheet" type="text/css">
+		<link href="../../css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+		<link href="../../css/style.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/moduleStyle.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/resourceStyle.min.css" rel="stylesheet" type="text/css">
+		<script src="../../js/lib/require.js"></script>
+		<script src="../../js/lib/config.js"></script>
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="../../css/font-awesome-ie7.min.css">
+		<![endif]-->
+		<!--[if lte IE 6]>
+	      <link rel="stylesheet"ac type="text../../css" href="../../css/bootstrap-ie6-min.css">
+	      <![endif]-->
+		<!--[if lte IE 7]>
+	      <link rel="stylesheet" type="text../../css" href="../../css/ie.css">
+	      <![endif]-->
+		<!--[if lt IE 9]>
+	        <script src="../../js/lib/html5shiv.min.js"></script>
+	        <script src="../../js/lib/respond.min.js"></script>
+	    <![endif]-->
+		<!--[if lte IE 6]>
+	        <script type="text/javascript" src="../../js/lib/bootstrap-ie.js"></script>
+	    <![endif]-->
+		<!--[if IE]>  
+	        <script type="text/javascript" src="../../js/lib/excanvas.compiled.js"></script>  
+	    <![endif]-->
+	    <style>
+	    	body{
+	    		background-color:#fff;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div class="ui-page-container">
+			<div class="ui-page-header">
+				<div class="ui-logo"><img src="../../images/logo1.png"/></div>
+				<div class="ui-navbar">
+					<ul>
+						<li>
+							<div class="ui-searchInput">
+								<input id="searchInput" type="text" class="form-control"/>
+								<i class="fa fa-search" id="searchIcon"></i>
+							</div>
+						</li>
+						<li><a title="门户首页"><i class="fa fa-home"></i><span>门户</span></a></li>
+						<li>
+							<div class="btn-group">
+								<a title="消息" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="fa fa-envelope"></i><span>消息(58)</span>
+								</a>
+								<ul class="dropdown-menu" role="menu">
+							        <li>
+							            <a href="#">系统消息</a>
+							        </li>
+							        <li>
+							            <a href="#">待办事项</a>
+							        </li>
+							        <li>
+							            <a href="#">告警信息</a>
+							        </li>
+							        
+							    </ul>
+						   </div>
+						</li>
+						
+						<li>
+							<div class="btn-group">
+								<a title="个人中心" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><span>个人中心</span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li style="padding:0 20px;font-size:12px;"><div><i class="fa fa-user" style="font-size:15px;margin-right:4px;"></i>欢迎，李某某</div></li>
+									<li class="divider" style="margin-top:0"></li>
+							        <li>
+							            <a href="#">账户管理</a>
+							        </li>
+							        <li>
+							            <a href="#">关于授权</a>
+							        </li>
+							       
+							        <li class="divider"></li>
+							        <li>
+							            <a href="#">退出</a>
+							        </li>
+							    </ul>
+						   </div>
+						</li>
+						<li><a title="帮助"><i class="fa fa-question-circle-o"></i><span>帮助</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ui-page-article">
+				<div class="ui-page-body">
+					<div class="ui-page-heading">查看编目</div>
+					<div class="ui-page-content">
+						<div class="ui-page-box dotted">
+							<div class="ui-page-box-heading">基本信息</div>
+							<div class="ui-page-box-content" style="width:300px;text-align:center;">
+								<img src="../../images/user_default.png" class="ui-page-headingImage"/>
+								<span>mysql</span>
+							</div>
+							<div class="ui-page-box-content">
+									<div class="ui-page-content">
+										<table class="ui-grid-wire">
+											<tbody>
+												<tr>
+													<td class="title" style="width:20%">资源编码</td>
+													<td></td>
+													<td class="title" style="width:20%">资源英文名称</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">资源类型</td>
+													<td></td>
+													<td class="title" style="width:20%">资源等级</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">主题分类</td>
+													<td></td>
+													<td class="title" style="width:20%">行业分类</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">发布目录</td>
+													<td></td>
+													<td class="title" style="width:20%">更新周期</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td class="title" style="width:20%">发布时间</td>
+													<td></td>
+													<td class="title" style="width:20%">最后更新时间</td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+							</div>
+						</div>
+						
+						<div class="ui-page-box dotted">
+							<div class="ui-page-box-heading">数据项信息</div>
+							<div class="ui-page-box-content">
+								<div class="ui-page-content" style="padding:0 10px;">
+										<table class="ui-grid-wire">
+											<thead>
+												<tr>
+													<td>数据项名称</td>
+													<td>数据项英文名称</td>
+													<td>数据项编码</td>
+													<td>数据项类型</td>
+													<td>数据项长度</td>
+													<td>数据元标识</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>				
+													<td>id(PK)</td>
+													<td>id</td>
+													<td>id</td>
+													<td>文本	</td>
+													<td>100</td>
+													<td>--</td>
+												</tr>
+												<tr>							
+													<td>name</td>
+													<td>name</td>
+													<td>name</td>
+													<td>文本</td>
+													<td>100</td>
+													<td>--</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script  type="text/x-handlebars-template" id="info-tpl">
+			<div class="panel-group" id="menubar">
+				{{#each this}}
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#menubar" href="#collapse{{@index}}">
+									<i class="{{this.icon}}"></i>{{label}}
+									<i attr="mt" class="fa fa-angle-down" style="float:right;font-size:12px;margin:15px 15px 0 0"></i>
+								</a>
+								
+							</h4>
+						</div>
+						<div id="collapse{{@index}}" class="panel-collapse collapse {{#if active}}in{{/if}}">
+							<div class="panel-body">
+								<ul>
+									{{#each this.items}}
+										<li url="{{this.url}}" {{#if active}}class='active'{{/if}} mid="{{this.id}}">{{this.label}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</script>
+		<script>
+			require(["app/example/treeDetailApp"],function(app){
+				app.main();
+			});
+		</script>
+	</body>
+</html>

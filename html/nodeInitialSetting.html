@@ -1,0 +1,162 @@
+<div class="res-check-common">
+	<div class="ui-box">
+		<div class="ui-steps blue" id="ui-steps" style="width:800px;"></div>
+	</div>
+	<div id="content1" class="hidden ui-gridbar">
+		<div class="tipBar">
+			<span class="text">注册协议</span>
+			<span class="triangle-right"></span>
+		</div>
+		<p>
+			一、 使用条款 在您使用DSSG数据开放共享平台（以下简称本平台）前，请认真阅读本协议。如使用本平台，您必须完全接受本协议中所包含的条款、条件和平台通告。
+本平台有权不经提前通知随时修改本协议。本协议一经变动，将在相关页面提示修改内容；用户如果不同意本协议的修改，可以放弃使用或者访问本平台或取消已经获得的服务；如果用户选择在本协议修改后继续使用本平台，则视为用户已经接受本协议的修改。
+		</p>
+		<p>
+			二、 用户接受条款 用户在访问或使用本平台过程中，必须遵循以下原则： （一）遵守中华人民共和国有关互联网管理的相关法律、法规和规章； （二）遵守所有与网络服务有关的网络协议、规定和程序； （三）禁止对平台进行技术性破坏，不得干扰或妨害本网站提供正常的互联网服务； （四）不得利用本平台进行任何可能对互联网的正常运转造成不利影响的行为； （五）不得为任何非法目的而使用、利用本平台； （六）不得利用本平台散布广告以及其它商业化的宣传； （七）不得利用本平台发布或传输任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的、可能产生不良后果的信息资料，不得发布任何包含种族、性别、宗教有歧视性和攻击性的信息内容； （八）用户发现任何非法使用用户帐号或安全漏洞的情况，应当立即告知本平台运营管理方。
+		</p>	
+		<p>
+			三、 平台服务内容 本平台主要提供数据开放共享等功能。平台数据涉及了表格、文本、图片、等各类实时与非实时的数据。
+		</p>
+		<p>
+			四、 用户的权利与义务 （一）用户的权利与义务 用户应在应用本平台数据资源所产生的成果中注明数据资源来源为【单位名称】。 （二）【单位名称】的权利与义务 本平台包含的所有内容（包括但不限于：文本、图形、图片、地图、LOGO标识，版面设计，专栏目录与名称、内容分类）的所有权归【单位名称】所有。
+		</p>
+		<p>
+			五、 免责声明 （一）本平台所有数据资源均为单位在开放共享业务中提供，本平台数据资源提供者对所提供数据的完整性、准确性、及时性不作任何承诺或担保； （二）用户因使用本平台所提供数据而造成的任何损失，由用户自行承担； （三）本平台保留由于法律、法规、规章或政策调整等原因而修订、中止、终止部分或全部平台服务的权利。
+		</p>
+		<p>
+			六、 隐私保护声明 本平台尊重并保护所有平台用户的个人隐私权，未经用户许可或根据相关法律、法规的强制性规定，本平台不主动将用户个人信息泄露给任何第三方。
+		</p>
+		<input type="checkbox" id="agree_clause"/>
+		<label for="">我同意上述条款</label>
+	</div>
+	<div id="content2">
+		<div class="tipBar">
+			<span class="text">认证管理节点证书</span>
+			<span class="triangle-right"></span>
+		</div>
+		<label for="">导入证书</label>
+		<button class="btn btn-primary leading-in">导入</button>
+		<form id="certificateFile" enctype="multipart/form-data">
+			<input type="file" name="file" id="myFile" style="display: none;"/>
+		</form>
+		<div id="ertificate_name"></div>
+		<form id="form" style="display: none;">
+			<div class="tipBar">
+				<span class="text">浏览证书信息</span>
+				<span class="triangle-right"></span>
+			</div>
+			<table class="ui-grid-wire">
+				<tbody>
+					<tr>
+						<td class="title" style="width:20%">设备名称</td>
+						<td name="equipmentName"></td>
+						<td class="title" style="width:20%">单位名称</td>
+						<td name="companyName"></td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%">联系人</td>
+						<td name="contacts"></td>           
+						<td class="title" style="width:20%">联系电话</td>
+						<td name="contactsTel"></td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%">邮箱</td>
+						<td name="email"></td>
+						<td class="title" style="width:20%">单位地址</td>
+						<td name="address"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<div id="content3" class="hidden ui-gridbar">
+		<div class="tipBar">
+			<span class="text">设置设备信息</span>
+			<span class="triangle-right"></span>
+		</div>
+		<form id="form3">
+			<table class="ui-grid-wire">
+				<tbody>
+					<tr>
+						<td class="title" style="width:20%"><span class="required"></span>设备名称</td>
+						<td>
+							<input type="text" name="equipmentName" class="form-control" placeholder="请输入" role="{required:true}"/>
+						</td>
+						<td class="title" style="width:20%"><span class="required"></span>联系人</td>
+						<td>
+							<input type="text" name="contacts" class="form-control" placeholder="请输入" role="{required:true}"/>
+						</td>  
+					</tr>
+					<tr>
+						<td class="title" style="width:20%"><span class="required"></span>联系电话</td>
+						<td>
+							<input type="text" name="contactsTel" class="form-control" placeholder="请输入" role="{mobile_telephone:true,required:true}"/>
+						</td>
+						<td class="title" style="width:20%"><span class="required"></span>邮箱</td>
+						<td>
+							<input type="text" name="email" class="form-control" placeholder="请输入" role="{required:true,email:true}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%"><span class="required"></span>单位地址</td>
+						<td>
+							<input type="text" name="address" class="form-control" placeholder="请输入" role="{required:true}"/>
+						</td>
+						<td class="title" style="width:20%"></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<div id="content4" class="hidden ui-gridbar">
+		<form id="form1">
+			<div class="tipBar">
+				<span class="text">设置IP信息</span>
+				<span class="triangle-right"></span>
+			</div>
+			<table class="ui-grid-wire">
+				<tbody>
+					<tr>
+						<td class="title" style="width:20%">设备序列号</td>
+						<td class="identifyication" name="identifyication" style="width:30%"></td>
+						<td class="title" style="width:20%">设备角色</td>
+						<td class="centerFlag" name="centerFlag"></td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%">设备外网地址</td>
+						<td class="publicIp" name="publicIp"></td>
+						<td class="title" style="width:20%">设备内网地址</td>
+						<td class="innerIp" name="innerIp"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="tipBar">
+				<span class="text">设备单位信息</span>
+				<span class="triangle-right"></span>
+			</div>
+			<table class="ui-grid-wire">
+				<tbody>
+					<tr>
+						<td class="title" style="width:20%">设备名称</td>
+						<td class="name" style="width:30%" name="name"></td>
+						<td class="title" style="width:20%">单位名称</td>
+						<td class="company" style="width:30%" name="company"></td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%">联系人</td>
+						<td class="contacts" name="contacts"></td>
+						<td class="title" style="width:20%">联系电话</td>
+						<td class="telphone" name="telphone"></td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%">联系邮箱</td>
+						<td class="email" name="email"></td>
+						<td class="title" style="width:20%">单位地址</td>
+						<td class="address" name="address"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</div>

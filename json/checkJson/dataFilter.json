@@ -1,0 +1,24 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data":[
+		{
+			"resName":"常用人口信息",
+			"dataName":"姓名",
+			"dataType":1,
+			"fieldName":"name",
+			"compare":"策略1",
+			"compareValue":"****，***",
+			"operate":"删除"
+		},
+		{
+			"resName":"常用人口信息",
+			"dataName":"身份证",
+			"dataType":1,
+			"fieldName":"name",
+			"compare":"包含",
+			"compareValue":"****，***",
+			"operate":"删除"
+		}
+	]
+}

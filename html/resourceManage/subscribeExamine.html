@@ -1,0 +1,66 @@
+<!--表格搜索区域-->
+<div class="subscribeExamine">
+	<input type="hidden"class="dataResourceId">
+	<input type="hidden"class="dataSubscribeId">
+	<input type="hidden" class="res-name">
+	<div class="ui-searchbar" style="height:60px;">
+		<form class="ui-searchbar-form form-inline" id="search-form">
+			  <div class="form-group">
+			    <label for="name">资源名称/编码</label>
+			    <input type="text" name="resNameOrCode" class="form-control" placeholder="请输入资源名称/编码">
+			  </div>
+			  <div class="form-group">
+			    <label for="name">发布目录</label>
+			    <select class="form-control catalogId" name="catalogId">
+			    </select>
+			  </div>
+			  <script type="text/x-handlebars-template" id="catalogId-tpl">
+			 		<option value="*">全部</option>
+			 		{{#each this}}
+			 			<option value={{this.value}}>{{this.label}}</option>
+			 		{{/each}}
+		      </script>
+			  <div class="form-group">
+			    <label for="name">订阅时间</label>
+			    <select class="form-control" name="cycleType">
+			    	<option value="*">全部</option>
+			    	<option value="1">最近一周</option>
+			    	<option value="2">最近一月</option>
+			    	<option value="3">最近三月</option>
+			    	<option value="4">最近一年</option>
+			    </select>
+			  </div>
+			  <input type="hidden" id="status" name="state" value="0"/>
+		</form>
+		<div class="ui-searchbar-buttonbar">
+			<button class="btn btn-info" id="search">查询</button>
+			<button class="btn btn-warning" id="reset">重置</button>
+		</div>
+	</div>
+	<!--表格区域-->
+	<div class="ui-content" style="top:70px;">
+		<div class="ui-grid-buttonbar">
+			<ul class="ui-grid-linkGroup">
+				<li class="active" key="0">全部</li>
+				<li key="1">待审核</li>
+				<li key="2">已审核</li>
+				<li key="3">已拒绝</li>
+			</ul>
+		</div>
+		<div class="ui-gridbar">
+			<table id="example" class="ui-blockGrid" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+</div>	
+<script>
+	var dbPublishDataJson=[];
+	require(["app/resourceManage/subscribeExamine"],function(app){
+		app.main();
+	});
+</script>

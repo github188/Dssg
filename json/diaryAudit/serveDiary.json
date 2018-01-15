@@ -1,0 +1,106 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data": [
+		{
+			"id":"1",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"2",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"3",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"4",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"5",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"6",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"7",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"8",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"9",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"10",
+			"API":"编目管理",
+			"type":"登录",
+			"publishEquipment":"本地DSSG",
+			"requestInfor":"192.168.30.237",
+			"requestTime":"2017-08-17 13:21:25",
+			"respondTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		}
+	]
+}

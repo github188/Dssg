@@ -1,0 +1,89 @@
+<!--表格搜索区域-->
+<div class="ui-searchbar" style="height:100px">
+	<form class="ui-searchbar-form form-inline" id="search-form">
+		  <div class="form-group">
+		    <label for="name">资源IP</label>
+		    <input type="text" name="ip" class="form-control" placeholder="请输入IP">
+		  </div>
+		  <div class="form-group">
+		    <label for="name">资源厂商</label>
+		    <select class="form-control" name="company">
+		    	<option value="-1">*请选择*</option>
+		    	<option value="1">华为</option>
+		    	<option value="2">思科</option>
+		    	<option value="3">甲骨文</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="name">时间</label>
+		    <input type="text" class="form-control date" id="" placeholder="请输入时间">
+		  </div>
+		 
+		  <div class="form-group">
+		    <label for="name">行业</label>
+	    	<input type="text" class="form-control ui-treeSelect" id="hy">
+		  </div>
+		  
+		  <div class="form-group">
+		    <label for="name">资源厂商</label>
+		    <select class="form-control" id="company">
+		    	<option value="-1">*请选择*</option>
+		    	<option value="1">华为</option>
+		    	<option value="2">思科</option>
+		    	<option value="3">甲骨文</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="name">资源名称</label>
+		    <input type="text" class="form-control" id="ip" placeholder="请输入名称">
+		  </div>
+	</form>
+	<div class="ui-searchbar-buttonbar">
+		<button class="btn btn-info" id="search">查询</button>
+		<button class="btn btn-warning" id="reset">重置</button>
+	</div>
+</div>
+<div class="ui-content" style="top:110px;">
+	<div class="ui-grid-buttonbar" style="height:40px;">
+		<ul class="ui-grid-buttonGroup left">
+			<li><button class="btn btn-link add"><i class="fa fa-plus"></i><span>新增</span></button></li>
+			<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+			<li><button class="btn btn-link modify disabled"><i class="fa fa fa-pencil"></i><span>修改</span></button></li>
+			
+		</ul>
+		<ul class="ui-grid-buttonGroup right">
+			<li><button class="btn btn-link submit"><i class="fa fa-hand-pointer-o"></i><span>提交</span></button></li>
+			<li><button class="btn btn-link verify"><i class="fa fa-thumb-tack"></i><span>审核</span></button></li>
+			<li><button class="btn btn-link view"><i class="fa fa-search"></i><span>查看</span></button></li>
+			<li><button class="btn btn-link export"><i class="fa fa-arrow-down"></i><span>导入</span></button></li>
+			<li><button class="btn btn-link import"><i class="fa fa-arrow-up"></i><span>导出</span></button></li>
+			<li><button class="btn btn-link download"><i class="fa fa-download"></i><span>下载</span></button></li>
+			<li><button class="btn btn-link upload"><i class="fa fa-upload"></i><span>上传</span></button></li>
+			<li><button class="btn btn-link upload"><i class="fa fa-cog"></i><span>设置</span></button></li>
+			<li><button class="btn btn-link upload"><i class="fa fa-sign-out"></i><span>退出</span></button></li>
+			<li><button class="btn btn-link upload"><i class="fa fa-play"></i><span>启动</span></button></li>
+			<li><button class="btn btn-link upload"><i class="fa fa-stop"></i><span>停用</span></button></li>
+			<li><button class="btn btn-link upload"><i class="fa fa-undo"></i><span>重置</span></button></li>
+		</ul>
+	</div>
+	<div class="ui-gridbar">
+		<table id="example" class="ui-grid display" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th><input type="checkbox" id="cball"/></th>
+					<th>目录名称</th>
+					<th>目录编码</th>
+					<th>目录审核节点</th>
+					<th>目录审核员</th>
+					<th>联系电话</th>
+					<th>审核单位</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<script>
+	require(["app/example/gridApp"],function(app){
+		app.main();
+	});
+</script>

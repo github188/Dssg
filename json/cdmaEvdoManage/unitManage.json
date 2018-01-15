@@ -1,0 +1,66 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data": [
+		{
+			"id":"1",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"2",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"3",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"4",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"5",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"6",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"7",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"8",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"9",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		},
+		{
+			"id":"10",
+			"nuitName":"江苏省人事社保局",
+			"nuitCode":"102121",
+			"describeInfor":"江苏省人事社保局"
+		}
+	]
+}

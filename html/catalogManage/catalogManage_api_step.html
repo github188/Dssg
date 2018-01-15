@@ -1,0 +1,248 @@
+<div class="ui-box">
+	<div class="ui-steps blue" id="ui-steps" style="width:1000px;"></div>
+</div>
+<div id="content1" class="hidden">
+	<form id="form1" class="ui-form" role="form">
+		<div class="ui-page-box-content">
+			<div class="ui-page-content">
+				<table class="ui-grid-wire">
+					<tbody>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>联系人</td>
+							<td>
+								<input type="text" name="linkman" class="form-control linkMan" placeholder="请输入..." role="{required:true,length:36}"/>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>资源类型</td>
+							<td>
+								<select class="form-control" name="resType" role="{required:true}" id="resType">
+							    	<option value="3">API</option>
+							    	<option value="1">数据库</option>
+							    	<option value="2">文件</option>
+							    </select>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%">编目原因</td>
+							<td>
+								<input type="text" name="catalogUnit" class="form-control" placeholder="请输入..." value="资源开放共享" role="{length:200}"/>
+							</td>
+							<td class="title" style="width:20%">联系电话</td>
+							<td>
+								<input type="text" name="phone" role="{mobile_telephone:true}" class="form-control phone" placeholder="请输入..."/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>数据来源</td>
+							<td>
+								<select class="form-control" name="apiType">
+									<option value="local">本地数据源</option>
+									<option value="3d">第三方API</option>
+								</select>
+							</td>
+							<td class="title" style="width:20%"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>		  
+	</form>
+</div>
+<div id="content2" class="hidden">
+	<form id="form2" class="ui-form" role="form">
+		<div class="ui-page-box-content">
+			<div class="ui-page-content">
+				<table class="ui-grid-wire">
+					<tbody>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>资源名称</td>
+							<td>
+								<input type="text" name="resName" class="form-control identicalName" data-type="1" placeholder="请输入..." role="{required:true,length:150}"/>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>资源英文名</td>
+							<td>
+								<input type="text" name="resEname" class="form-control identicalName" data-type="3" placeholder="请输入..." role="{required:true,filter:true,length:150}"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>资源编码</td>
+							<td>
+								<input type="text" name="resCode" class="form-control identicalName" data-type="2"  placeholder="请输入..." role="{required:true,en_number:true,length:150}"/>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>资源等级</td>
+							<td>
+								<select class="form-control" name="resLevel" role="{required:true}">
+									<option value="1">部分共享</option>
+									<option value="2">完全共享</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%">资源摘要</td>
+							<td>
+								<input type="text" name="abstracts" class="form-control" placeholder="请输入..." role="{length:400}"/>
+							</td>
+							<td class="title" style="width:20%">更新周期</td>
+							<td>
+								<input type="text" name="updateCycle" class="form-control" placeholder="请输入..." role="{length:50}"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>主题分类</td>
+							<td>
+								<input type="text" class="form-control ui-treeSelect" readonly="readonly" name="themeName" id="themeName"  role="{required:true}"/>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>行业分类</td>
+							<td>
+								<input type="text" class="form-control ui-treeSelect" readonly="readonly" name="industryTypeName" id="industryTypeName"  role="{required:true}"/>
+							</td>
+							<input type="hidden" name="attachmentId" id="attachmentId"/>
+						</tr>
+						<tr>
+							<td class="title"><label for="name">图片</label></td>
+							<td>
+								<div class="ui-form-inputGroup check_button_group">
+									<button class="btn btn-info" onclick="return false" id="imageBtn"><i class="fa fa-folder-open" style='margin-right:4px;'></i>选择...</button>
+									<input style="display:none" class="form-control"/><span id="fileName"></span>
+								</div>
+							</td>
+							<td class="title"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</form>
+	<form id="uploadForm1" enctype="multipart/form-data">
+		<input type="file" name="file" id="file1" value="" style="display: none;"/>
+	</form>
+</div>
+<div id="content3" class="hidden">
+	<button class="btn btn-link add" id="addRowIn" style="margin-bottom: 10px;"><i class="fa fa-plus"></i>添加</button>
+	<table id="step_tableIn" class="ui-grid display" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+				<th>参数名称</th>
+				<th>参数类型</th>
+				<th>是否必填</th>
+				<th>示例</th>
+				<th>说明</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+	</table>
+</div>
+<div id="content4" class="hidden">
+	<button class="btn btn-link add" id="addRowOut" style="margin-bottom: 10px;"><i class="fa fa-plus"></i>添加</button>
+	<table id="step_tableOut" class="ui-grid display" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+				<th>参数名称</th>
+				<th>参数类型</th>
+				<th>是否可为空</th>
+				<th>示例</th>
+				<th>说明</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+	</table>
+</div>
+<div id="content5" class="hidden">
+	<div class="part1">
+		<div class="tipBar">
+			<span class="text resName"></span>
+			<span class="triangle-right"></span>
+		</div>
+		<div class="ui-page-content">
+			<div class="ui-page-box-content" style="width:20%;text-align:center">
+				<img src="../images/user_default.png" class="ui-page-headingImage"/>
+			</div>
+			<div class="ui-page-box-content" style="width:80%">
+				<div class="ui-page-content abstracts"></div>
+				<div>
+					<table class="ui-grid-wire" id="resMsg">
+						<tbody>
+							<tr>
+								<td class="title" style="width:20%">资源编码</td>
+								<td class="resCode"></td>
+								<td class="title" style="width:20%">资源英文名称</td>
+								<td class="resEname"></td>
+							</tr>
+							<tr>
+								<td class="title" style="width:20%">资源类型</td>
+								<td class="resType"></td>
+								<td class="title" style="width:20%">资源等级</td>
+								<td class="resLevel"></td>
+							</tr>
+							<tr>
+								<td class="title" style="width:20%">主题分类</td>
+								<td class="themeTypeName"></td>
+								<td class="title" style="width:20%">行业分类</td>
+								<td class="industryTypeName"></td>
+							</tr>
+							<tr>
+								<td class="title" style="width:20%">发布目录</td>
+								<td class="catalogName"></td>
+								<td class="title" style="width:20%">更新周期</td>
+								<td class="updateCycle"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="part2 api-type">
+		<div class="tipBar">
+			<span class="text">请求参数</span>
+			<span class="triangle-right"></span>
+			<div class="ui-page-content">
+				<div class="ui-page-box-content">
+					<table class="ui-grid-wire">
+						<thead>
+							<tr>			
+								<th>参数名称</th>
+								<th>参数类型</th>
+								<th>是否必填</th>
+								<th>说明</th>
+							</tr>
+						</thead>
+						<tbody class="in-tbody">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="part2 api-type">
+		<div class="tipBar">
+			<span class="text">返回参数</span>
+			<span class="triangle-right"></span>
+			<div class="ui-page-content">
+				<div class="ui-page-box-content">
+					<table class="ui-grid-wire">
+						<thead>
+							<tr>			
+								<th>参数名称</th>
+								<th>参数类型</th>
+								<th>是否可为空</th>
+								<th>说明</th>
+							</tr>
+						</thead>
+						<tbody class="out-tbody">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<input type="hidden" class="check_id"/>
+<script>
+	require(["app/catalogManage/catalogManage_api_step"],function(app){
+		app.main();
+	});
+</script>

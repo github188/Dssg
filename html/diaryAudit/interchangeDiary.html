@@ -1,0 +1,91 @@
+<!--表格搜索区域-->
+<div class="ui-searchbar" style="height:65px;" >
+	<form class="ui-searchbar-form form-inline" id="search-form">
+		  <div class="form-group">
+		    <label for="name">任务名称</label>
+		    <input type="text" name="taskName" class="form-control" placeholder="请输入数据库/文件资源...">
+		  </div>
+		  <div class="form-group">
+		    <label for="name">时间范围</label>
+		    <input type="text" class="form-control date" name="timeLi" style="width:300px;" id="start_date" placeholder="时间范围">
+		    <!--<input type="text" class="form-control date" name="endTime" id="end_date" placeholder="结束日期">-->
+		  </div>
+		  <div class="form-group">
+		    <label for="name">任务结果</label>
+		    <select class="form-control" id="state" name="state" style="width:150px;">
+		    	<option value="*">全部</option>
+		    	<option value="1">等待</option>
+		    	<option value="2">运行中</option>
+		    	<option value="3">成功</option>
+		    	<option value="4">失败</option>
+		    </select>
+		  </div>
+	</form>
+	<div class="ui-searchbar-buttonbar">
+	    <button class="btn btn-info" id="search">查询</button>
+		<button class="btn btn-warning" id="reset">重置</button>
+	</div>
+</div>
+<div class="ui-content" style="top:75px;">
+	<div class="ui-grid-buttonbar diary">
+		<ul class="ui-grid-linkGroup">
+			<li class="active">我发布的资源</li>
+			<li key="2">我订阅的资源</li>
+		</ul>
+		<ul class="ui-grid-buttonGroup right">
+			<li><button class="btn btn-link export"><i class="fa fa-arrow-up"></i><span>导出</span></button></li>
+		</ul>
+	</div>
+	<!--<div class="ui-grid-buttonbar">
+		<ul class="ui-grid-buttonGroup left">
+			<li><button class="btn btn-link export"><i class="fa fa-arrow-up"></i><span>导出</span></button></li>
+		</ul>
+	</div>-->
+	<!--发布的资源-->
+	<div id="publishResource">
+		<div class="ui-gridbar">
+			<table id="example" class="ui-grid" cellspacing="0" width="100%">
+				<thead>
+					<tr>															
+						<th><input type="checkbox" id="cball"/></th>
+						<th>任务名称</th>
+						<th>资源类型</th>
+						<th>异常数</th>
+						<!--<th>加载数</th>-->
+						<th>交换内容</th>
+						<th>开始时间</th>
+						<th>结束时间</th>
+						<th>任务结果</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<!--订阅的资源-->
+	<div id="subscribeResource" style="display: none;">
+		<div class="ui-gridbar" >
+			<table id="example1" class="ui-grid" cellspacing="0" width="100%">
+				<thead>
+					<tr>							
+						<th><input type="checkbox" id="cball1"/></th>
+						<th>任务名称</th>
+						<!--<th>发布设备</th>-->
+						<th>资源类型</th>
+						<th>异常数</th>
+						<!--<th>加载数</th>-->
+						<th>交换内容</th>
+						<th>开始时间</th>
+						<th>结束时间</th>
+						<th>任务结果</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+</div>
+<input type="hidden" class="errorInfo"/>
+<script>
+	require(["app/diaryAudit/interchangeDiary"],function(app){
+		app.main();
+	});
+</script>

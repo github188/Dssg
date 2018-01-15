@@ -1,0 +1,12 @@
+[
+  {"id":"include","name":"包含"},
+  {"id":"exclude","name":"不包含"},
+  {"id":"=","name":"等于"},
+  {"id":"<>","name":"不等于"},
+  {"id":">","name":"大于"},
+  {"id":"<","name":"小于"},
+  {"id":">=","name":"大于等于"},
+  {"id":"<=","name":"小于等于"},
+  {"id":"fixedLength","name":"定长"},
+  {"id":"regexp","name":"正则表达式"}
+]

@@ -1,0 +1,57 @@
+<!--表格搜索区域-->
+<div class="ui-searchbar" style="height:68px;">
+	<form class="ui-searchbar-form form-inline" id="search-form">
+		  <div class="form-group">
+		    <label for="name">用户名</label>
+		    <input type="text" class="form-control" id="loginName" name="loginName" placeholder="请输入名称">
+		  </div>
+		  <div class="form-group">
+		    <label for="name">角色</label>
+		    <select class="form-control resTypeName" id="roleCode" name="roleCode"></select>
+		  </div>
+		<script type="text/x-handlebars-template" id="userRole-tpl">
+	 		<option value="*">请选择</option>
+	 		{{#each this}}
+	 			<option value={{this.value}}>{{this.label}}</option>
+	 		{{/each}}
+    	</script>
+	</form>
+	<div class="ui-searchbar-buttonbar" style="top:18px">
+		<button class="btn btn-info" id="search">查询</button>
+		<button class="btn btn-warning" id="reset">重置</button>
+	</div>
+</div>
+<div class="ui-content" style="top:78px;">
+	<div class="ui-grid-buttonbar">
+		<ul class="ui-grid-buttonGroup left">
+			<li><button class="btn btn-link add"><i class="fa fa-plus"></i><span>新增</span></button></li>
+			<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+			<li><button class="btn btn-link modify disabled" keyAtrr="0"><i class="fa fa-pencil"></i><span>编辑</span></button></li>
+<!--			<li><button class="btn btn-link modify view disabled iconColorWrapper" keyAtrr="1"><i class="fa fa-search iconColor"></i><span>查看</span></button></li>
+-->			<li><button class="btn btn-link modify stop disabled iconColorWrapper" keyAtrr="2"><i class="fa fa-stop iconColor"></i><span>停用</span></button></li>
+			<li><button class="btn btn-link modify start disabled iconColorWrapper" keyAtrr="3"><i class="fa fa-play iconColor"></i><span>启用</span></button></li>
+			<li><button class="btn btn-link modify reset disabled iconColorWrapper" keyAtrr="4"><i class="fa fa-undo iconColor"></i><span>重置密码</span></button></li>
+		</ul>
+	</div>
+		<div class="ui-gridbar">
+		<table id="user" class="ui-grid" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th><input type="checkbox" id="cball"/></th>
+					<th>用户名</th>
+					<th>姓名</th>
+					<th>角色</th>
+					<th>手机</th>
+					<th>办公电话</th>
+					<th>邮箱</th>
+					<th>状态</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<script>
+	require(["app/systemManage/userManage/userManage"],function(app){
+		app.main();
+	});
+</script>

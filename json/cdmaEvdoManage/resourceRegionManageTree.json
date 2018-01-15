@@ -1,0 +1,45 @@
+[
+	{ "id":1, "pId":0, "name":"根域", "open":true,"icon":"../images/0.png"},
+	{ "id":2, "pId":1, "name":"数据库资源域","open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":3, "pId":2, "name":"公安厅DSSG","icon":"../images/4.png"},
+	{ "id":4, "pId":1, "name":"FILE资源专用域", "open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":5, "pId":4, "name":"公安厅DSSG","icon":"../images/4.png"},
+	{ "id":6, "pId":4, "name":"江苏省交通厅","icon":"../images/4.png"},
+	{ "id":7, "pId":4, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":8, "pId":1, "name":"远程错乱测试域", "open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":9, "pId":8, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":10, "pId":8, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":11, "pId":8, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":12, "pId":8, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":13, "pId":1, "name":"目录同步测试域","open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":14, "pId":13, "name":"公安厅DSSG","icon":"../images/4.png"},
+	{ "id":15, "pId":13, "name":"本地DSSG","icon":"../images/4.png"},
+	{ "id":16, "pId":13, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":17, "pId":1, "name":"API资源专用域", "open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":18, "pId":17, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":19, "pId":17, "name":"公安厅DSSG","icon":"../images/4.png"},
+	{ "id":20, "pId":1, "name":"测试域", "open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":21, "pId":20, "name":"公安厅DSSG","icon":"../images/4.png"},
+	{ "id":22, "pId":1, "name":"数据库域测试", "open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":23, "pId":22, "name":"民政厅DSSG","icon":"../images/4.png"},
+	{ "id":24, "pId":22, "name":"公安厅DSSG","icon":"../images/4.png"},
+	{ "id":25, "pId":1, "name":"三台设备测试域", "open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":26, "pId":25, "name":"公安厅DSSG","icon":"../images/4.png"},
+	{ "id":27, "pId":25, "name":"本地DSSG","icon":"../images/4.png"},
+	{ "id":28, "pId":25, "name":"民政厅DSSG","icon":"../images/4.png"}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

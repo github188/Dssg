@@ -1,0 +1,20 @@
+<div style="padding: 30px;" class="tableRel">
+	<p class="" style="margin-bottom: 10px;">
+		<input type="checkbox" name="" value="1" />
+		<label for="">左连接</label>
+	</p>
+	<p class="" style="margin-bottom: 10px;">
+		<input type="checkbox" name=""  value="2" />
+		<label for="">右连接</label>
+	</p>
+	<p class="" style="margin-bottom: 10px;">
+		<input type="checkbox" name=""  value="3" checked="checked"/>
+		<label for="">内连接</label>
+	</p>
+</div>
+<script>
+	$(".tableRel").on("click","input", function(){
+		$(this).attr("checked",true);
+		$(this).parent("p").siblings().find("input").attr("checked",false);
+	})
+</script>

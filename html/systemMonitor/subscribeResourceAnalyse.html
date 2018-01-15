@@ -1,0 +1,144 @@
+<style type="text/css">
+	.w300{
+		width: 250px !important;
+	}
+</style>
+<div class="scrollWrapper" style="left: 5px;">
+	<div class="ui-searchbar" style="height:175px;width:100%;left:0;right:0;position:relative;z-index:0">
+		<div class="ui-grid-buttonbar">
+			<ul class="ui-grid-linkGroup">
+				<li class="active"key="1">数据库</li>
+				<li key="2">文件</li>
+				<li key="3">API</li>
+			</ul>
+		</div>	
+		<form class="ui-searchbar-form form-inline" id="search-form" style="width:100%;padding:0;top:60px;"> 
+			<div class="form-group">
+			    <label for="name">资源名称</label>
+			    <select class="form-control sourceName" name="resourceId">
+			    </select>
+			</div>
+			<script type="text/x-handlebars-template" id="sourceName-tpl">
+			 		<option value="0">全部</option>
+			 		{{#each this}}
+			 			<option value={{this.value}}>{{this.label}}</option>
+			 		{{/each}}
+		    </script>
+		    
+			<div class="form-group onlyAPIshow" style="display: none;">
+			    <label for="name">应用名称</label>
+			    <select class="form-control applyName" name="applyName"></select>
+			</div>
+			<script type="text/x-handlebars-template" id="applyName-tpl">
+			 		<option value="0">全部</option>
+			 		{{#each this}}
+			 			<option value={{this.value}}>{{this.label}}</option>
+			 		{{/each}}
+		    </script>
+			<div class="form-group">
+			    <label for="name">日期范围</label>
+			    <input type="text" class="form-control date w300"  name="startTime" id="startTime" placeholder="开始日期">
+			</div>
+			<div class="form-group">
+			  	<button class="btn btn-info" id="search" onClick="return false">查询</button>
+			</div>
+		</form>
+		<div class="counter">
+		</div>
+	</div>
+<div class="ui-content ui-content-change" style="width:100%;left:0;right:0;margin-bottom: 10px;">
+	<div class="ui-box-abs left" style="height:300px;padding:0;padding-right:5px;">
+		<div class="ui-panel">
+			<div class="ui-panel-header border">
+				<div class="ui-panel-label">
+					<i class="fa fa-line-chart"></i>
+					<span>趋势图</span>
+				</div>
+				<div class="ui-panel-buttonbar" id="p2" style="margin-right:8px">
+					<select id ="lineList" class="form-control" style="font-size:12px;height:22px">
+					</select>
+				</div>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-chartbar" id="chart1">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ui-box-abs right" style="height:300px;padding:0;padding-left:5px;">
+		<div class="ui-panel">
+			<div class="ui-panel-header border">
+				<div class="ui-panel-label">
+					<i class="fa fa-pie-chart"></i>
+					<span>订阅资源</span>
+				</div>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-chartbar" id="chart2">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-content" style="overflow: visible;height:530px;width:100%;left:0;right:0;margin-bottom: 10px;">
+	<div class="ui-grid-buttonbar">
+		<ul class="ui-grid-buttonGroup left">
+			<li style="margin-top: 5px;"><i class="fa fa-file-text-o mr-5"></i><span>详细数据</span></li>
+		</ul>
+		<ul class="ui-grid-buttonGroup right">
+			<li><button class="btn btn-link import"><i class="fa fa-arrow-up"></i><span>导出</span></button></li>
+		</ul>
+	</div>
+	
+	<!--数据库-->
+	<div id="dataContent" >
+		<div class="ui-gridbar" style="overflow: visible;">
+			<table id="example1" class="ui-grid" cellspacing="0" width="100%">
+				<thead>						
+					<tr>			
+						<th>日期</th>
+						<th>加载流量数</th>
+						<th>加载记录数</th>
+						<th>任务执行次数</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+		<!--文件-->
+	<div  id="fileContent"   style="display: none;">
+		<div class="ui-gridbar">
+			<table id="example2" class="ui-grid" cellspacing="0" width="100%">
+				<thead>						
+					<tr>			
+						<th>日期</th>
+						<th>加载流量数</th>
+						<th>加载文件数</th>
+						<th>任务执行次数</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<!--api-->
+	<div id="apiContent"   style="display: none;"> 
+		<div class="ui-gridbar">
+			<table id="example3" class="ui-grid" cellspacing="0" width="100%">
+				<thead>						
+					<tr>			
+						<th>日期</th>
+						<th>订阅API数</th>
+						<th>调用次数</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="statisticalDate">统计日期截止至<span class="showDate"></span></div>
+</div>
+<script>
+	require(["app/systemMonitor/subscribeResourceAnalyse"],function(app){
+		app.main();
+	});
+</script>

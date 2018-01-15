@@ -1,0 +1,33 @@
+<form id="form" class="ui-form" role="form">
+	<div class="ui-page-box-content">
+			<div class="ui-page-content">
+				<table class="ui-grid-wire">
+					<tbody>
+						<tr>
+							<td class="title" style="width:40%"><span class="required"></span>资源域名称</td>
+							<td>
+									<input type="text" name="name" class="form-control" placeholder="请输入资源域名称" role="{required:true,length:100}" id="name"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:40%"><span class="required"></span>域管理员</td>
+							<td>
+								<input type="text" name="contacts" class="form-control" placeholder="请输入域管理员" role="{required:true}" id="contacts"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:40%"><span class="required"></span>联系电话</td>
+							<td>
+								<input type="text" name="telphone" class="form-control" role="{required:true,mobile_telephone:true}" placeholder="请输入联系电话" id="telphone"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	</div>
+</form>
+<script>
+	require(["app/cdmaEvdoManage/resourceRegionManage_add"],function(app){
+		app.main();
+	});
+</script>

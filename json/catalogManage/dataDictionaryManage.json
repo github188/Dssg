@@ -1,0 +1,66 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data": [
+		{
+			"id":"1",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"2",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"3",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"4",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"5",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"6",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"7",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"8",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"9",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		},
+		{
+			"id":"10",
+			"dictionarySum":"信息技术服务业",
+			"dictionaryCode":"8214",
+			"describe":"信息技术服务业"
+		}
+	]
+}

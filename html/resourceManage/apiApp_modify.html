@@ -1,0 +1,28 @@
+<form id="form" class="ui-form" role="form">
+	<div class="ui-page-box-content">
+		<div class="ui-page-content">
+			<table class="ui-grid-wire">
+				<tbody>
+					<tr>
+						<td class="title" style="width:20%"><span class="required"></span>应用名称</td>
+						<td>
+								<input type="text" name="appName" class="form-control" placeholder="请输入应用名称" role="{required:true,length:50}" id="data_name"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%">应用简介</td>
+						<td>
+								<input type="text" name="description" class="form-control" placeholder="请输入应用简介" id="data_summary" role="{length:200}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="title" style="width:20%"><span class="required"></span>调用系统ip地址</td>
+						<td>
+								<input type="text" name="ipAddress" class="form-control" placeholder="请输入IP地址和端口，多个用;号间隔，如202.102.20.1:8000" role="{required:true,ips_port:true}" id="data_ip"/>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</form>

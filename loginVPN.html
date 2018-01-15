@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<title>登录</title>
+		<link href="css/style.min.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/loginVPN.min.css" rel="stylesheet" type="text/css">
+		<script src="js/lib/require.js"></script>
+		<script src="js/lib/config.js"></script>
+	</head>
+	<body>
+		<img src="images/2.1.png" class="login_bg"/>
+		<img src="images/logo_03.png" class="login_logovpn"/>
+		<img src="images/2.2_06.png" class="login_logovpnText"/>
+		<div class="login_form_box">
+			<div class="login_form_head">
+				用户登录
+				<img src="images/loginVPN/login2_10.png"/ class="head_picture">
+			</div>
+			<form class="login_form" onsubmit="return false">
+				<div class="login_ursePass">
+					<i class="glyphicon glyphicon-user"></i>
+					<input type="text" name="" id="name" value="" placeholder="请输入用户名"/>
+				</div>
+				
+				<div class="eroor_massage" id="userPass_info"></div>
+				<div class="login_ursePass">
+					<i class="glyphicon glyphicon-lock"></i>
+					<input type="password" name="" id="password" value="" placeholder="请输入密码"/>
+				</div>
+				<div class="captcha_box">
+					<div>
+						<i class="glyphicon glyphicon-check"></i>
+						<input type="text" placeholder="验证码" id="captcha"/>
+					</div>
+					<img class="captcha_img" onclick="this.src=this.src+'?'">
+				</div>
+				<div class="eroor_massage" id="captcha_info"></div>
+				<button id="login_button">
+					<img src="images/loginBtn.png" alt="" />
+				</button>
+			</form>
+			
+		</div>
+		<!--<div class="foot_version_text">Copyright © 2016-2017 版权所有:江苏飞搏软件股份有限公司</div>-->
+		<script type="text/javascript">
+			require(["app/loginApp"],function(app){
+				app.main();
+			});
+		</script>
+	</body>
+</html> 

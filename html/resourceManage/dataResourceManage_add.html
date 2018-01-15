@@ -1,0 +1,53 @@
+<form id="form" class="ui-form" role="form">
+		<div class="ui-page-box-content">
+			<div class="ui-page-content">
+				<table class="ui-grid-wire">
+					<tbody>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>数据源名称</td>
+							<td>
+								<input type="text" name="name" class="form-control" placeholder="请输入数据源名称" role="{required:true}" id="name"/>
+							</td>
+							<td class="title" style="width:20%"><span class="required"></span>数据源类型</td>
+							<td>
+								<select class="form-control" name="type" role="{required:true}" id="type">
+							    	<option value="1">数据库</option>
+							    	<option value="2">文件</option>
+							    </select>
+							</td>
+						</tr>
+					</tbody>
+					<tbody class="tbody"></tbody>
+					<tbody>
+						<tr class="ftpHide">
+							<td class="title" style="width:20%"><span class="required"></span>服务器IP地址</td>
+							<td>
+								<input type="text" name="ip" class="form-control ip_address" placeholder="请输入服务器IP地址" role="{required:true,ip:true}"/>
+							</td>
+							<td class="title ftpHide" style="width:20%"><span class="required"></span>服务器端口</td>
+							<td class="ftpHide">
+								<input type="text" name="port" class="form-control port" placeholder="请输入服务器端口" role="{required:true,port:true,number:true}" />
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:20%"><span class="required"></span>用户名</td>
+							<td><input type="text" name="username" class="form-control" placeholder="请输入用户名" role="{required:true}"/></td>
+							<td class="title" style="width:20%"><span class="required"></span>密码</td>
+							<td>
+								<input type="text" name="password" class="form-control" placeholder="请输入密码" role="{required:true}"/>
+							</td>
+						</tr>
+					</tbody>
+					<tbody class="tfoot"></tbody>
+				</table>
+			</div>
+			
+	</div>
+</form>
+<input type="hidden" id="click_but_type"/>
+<input type="hidden" id="checkName"/>
+<script>
+	require(["app/resourceManage/dataResourceManage_add"],function(app){
+		app.main();
+	});
+</script>

@@ -1,0 +1,13 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data":[
+			{
+				"id":"1",
+				"name":"文件名",
+				"type":"文件类型",
+				"size":"文件大小",
+				"lastUpdate":"最近修改日期"
+			}
+	]
+}

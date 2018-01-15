@@ -1,0 +1,62 @@
+<form class="ui-searchbar-form form-inline" id="search-form">
+</form>
+<div class="ui-content" style="top:3px;">
+	<div class="ui-aside left" id="treeAside">
+		<ul class="ztree ui-treebar" id="treebar"></ul>
+	</div>
+	<div class="ui-aside right" id="rightPage">
+		<!--父级展示-->
+		<div id="parent_menu">
+			<div class="ui-grid-buttonbar">
+				<ul class="ui-grid-buttonGroup left">
+					<li><button class="btn btn-link add"><i class="fa fa-plus"></i><span>新增</span></button></li>
+					<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+					<li><button class="btn btn-link modify disabled"><i class="fa fa-pencil"></i><span>修改</span></button></li>
+					<li><button class="btn btn-link quit"><i class="fa fa-sign-out"></i><span>退出</span></button></li>
+				</ul>
+			</div>
+			<div class="ui-gridbar">
+				<table id="example" class="ui-grid" cellspacing="0" width="100%">
+					<thead>
+						<tr>					
+							<th><input type="checkbox" id="cball"/></th>
+							<th>资源域名称</th>
+							<th>管理节点</th>
+							<th>域管理员</th>
+							<th>联系电话</th>
+							<th>管理单位</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<!--子级展示-->
+		<div id="child_menu" style="display:none;">
+			<div class="ui-grid-buttonbar">
+				<ul class="ui-grid-buttonGroup left">
+					<li><button class="btn btn-link adds" id="maintenance"><i class="fa fa-plus"></i><span>设备维护</span></button></li>
+				</ul>
+			</div>
+			<div class="ui-gridbar">
+				<table id="example1" class="ui-grid" cellspacing="0" width="100%">
+					<thead>
+						<tr>								
+							<th><input type="checkbox" id="cball1"/></th>
+							<th>设备名称</th>
+							<th>设备地址</th>
+							<th>设备角色(域内)</th>
+							<th>所属单位</th>
+							<th>状态</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<input type="hidden" id="currentTreeId"/>
+<script>
+	require(["app/cdmaEvdoManage/resourceRegionManage"],function(app){
+		app.main();
+	});
+</script>

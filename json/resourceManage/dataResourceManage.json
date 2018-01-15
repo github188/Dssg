@@ -1,0 +1,80 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data": [
+		{
+
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"2"
+
+		},
+		{
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"2"
+			
+		},
+		{
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"1"
+
+		},
+		{
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"2"
+		},
+		{
+
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"2"
+			
+		},
+		{
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"2"
+			
+		},
+		{
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"2"
+			
+		},
+		{
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"1"
+			
+		},
+		{
+				"id":1,
+				"dataName":"iis230.9",
+				"IPAddress":"192.168.230.9",
+				"port":"121",
+				"dataType":"2"
+			
+		}
+	]
+		
+}

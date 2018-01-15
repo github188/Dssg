@@ -1,0 +1,26 @@
+<div class="ui-content">
+	
+	<div style="float:left;width:300px;height:300px;border:1px solid #ddd">
+		<div style="padding:20px;border:1px solid #ddd;cursor:pointer;float:left;margin:20px;" class="user" uv="小李飞刀" uid="1"><div style="width:100%;height:100%">张xxx</div></div>
+		<div style="padding:20px;border:1px solid #ddd;cursor:pointer;float:left;margin:20px;" class="user" uv="李xxx" uid="2">李xxx</div>
+		<div style="padding:20px;border:1px solid #ddd;cursor:pointer;float:left;margin:20px;" class="user" uv="王xxx" uid="3">王xxx</div>
+	</div>
+	<div style="float:right;width:500px;height:300px;border:1px solid #ddd">
+		<!--<div style="float:left;width:50px;height:50px" id="right"></div>-->
+		<div class="dragBox" style="float:left;width:200px;height:100px;margin:20px;border:1px solid #ddd;"><i class="fa fa-trash-o removedragPickTools" style="font-size:14px;cursor:pointer;float:right;margin:2px;" title="移除"></i></div>
+		<div class="dragBox" style="float:left;width:200px;height:100px;margin:20px;border:1px solid #ddd;"></div>
+		<div class="dragBox" style="float:left;width:200px;height:100px;margin:20px;border:1px solid #ddd;"></div>
+	</div>
+	<div style="float:right;width:500px;height:300px;border:1px solid #ddd">
+		<!--<div style="float:left;width:50px;height:50px" id="right"></div>-->
+		<div class="dragBox" style="float:left;width:200px;height:100px;margin:20px;border:1px solid #ddd;">
+			<i class="fa fa-trash-o removedragPickTools" style="font-size:14px;cursor:pointer;float:right;margin:2px;" title="移除"></i>
+		</div>
+		
+	</div>
+</div>
+<script>
+	require(["app/example/dragApp"],function(app){
+		app.main();
+	});
+</script>

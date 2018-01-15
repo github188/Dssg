@@ -1,0 +1,74 @@
+<!--交换任务监控-->
+<div class="ui-searchbar" style="height:68px;">
+	<form class="ui-searchbar-form form-inline" id="publishRes-form">
+		<div class="form-group">
+		    <label for="name">API接口服务</label>
+		    <input type="text" class="form-control" id="taskName" name="taskName" placeholder="请输入API接口服务">
+        </div>
+	</form>
+	<form class="ui-searchbar-form form-inline" id="subscibeRes-form" style="display:none">
+		<div class="form-group">
+		    <label for="name">API接口服务</label>
+		    <input type="text" class="form-control" id="taskName" name="taskName" placeholder="请输入任务名称">
+        </div>
+	    <div class="form-group">
+		    <label for="name">发布设备</label>
+		    <input  type="text" class="form-control equipment" id="pubEquipmentName" name="pubEquipmentName" placeholder="请输入发布设备">
+	    </div>
+	</form>
+	<div class="ui-searchbar-buttonbar" style="top:18px">
+		<button class="btn btn-info search">查询</button>
+		<button class="btn btn-warning reset">重置</button>
+	</div>
+</div>
+<!--表格区域-->
+<div class="ui-content" style="margin-top:78px">
+	<div class="ui-grid-buttonbar diary">
+		<ul class="ui-grid-linkGroup">
+			<li class="active" key="0">我发布的资源</li>
+			<li key="1">我订阅的资源</li>
+		</ul>
+		<ul class="ui-grid-buttonGroup right">
+			<li><button class="btn btn-link delete start disabled iconColorWrapper" keyAtrr="1"><i class="fa fa-play iconColor"></i><span>启用</span></button></li>
+			<li><button class="btn btn-link delete stop disabled iconColorWrapper" keyAtrr="0"><i class="fa fa-stop iconColor"></i><span>停用</span></button></li>
+		</ul>
+	</div>
+	<div class="ui-gridbar publishRes">
+		<table id="publishRes" class="ui-grid" cellspacing="0" width="100%" >
+			<thead>
+				<tr>
+					<th><input type="checkbox" id="cball1"/></th>
+					<th>API接口服务</th>
+					<th>应用名称</th>
+					<th>类型</th>
+					<th>当前状态</th>
+					<th>请求时段</th>
+					<th>每日最大请求次数</th>
+					<th>当前请求次数</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<div class="ui-gridbar subscibeResWrapper" style="display:none;">
+		<table id="subscibeRes" class="ui-grid" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th><input type="checkbox" id="cball2"/></th>
+					<th>API接口服务</th>
+					<th>应用名称</th>
+					<th>类型</th>
+					<th>发布设备</th>
+					<th>当前状态</th>
+					<th>请求时段</th>
+					<th>每日最大请求次数</th>
+					<th>当前请求次数</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<script>
+	require(["app/systemManage/apiMonitor/apiMonitor"],function(app){
+		app.main();
+	});
+</script>

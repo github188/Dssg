@@ -1,0 +1,127 @@
+<div class="res-check-common">
+	<input type="hidden" id="catalog_detail"/>
+	<div id="content" style="width: 800px;margin:0 auto;">
+		<div class="part1">
+			<div class="tipBar">
+				<span class="text resName"></span>
+				<span class="triangle-right"></span>
+			</div>
+			<div class="ui-page-content">
+				<div class="ui-page-box-content" style="width:20%;text-align:center">
+					<!--<img src="../images/user_default.png" class="ui-page-headingImage"/>-->
+					<img src="" class="ui-page-headingImage"/>
+				</div>
+				<div class="ui-page-box-content" style="width:80%">
+					<div class="ui-page-content abstracts"></div>
+					<div>
+						<table class="ui-grid-wire" id="resMsg">
+							<tbody>
+								<tr>
+									<td class="title" style="width:20%">资源编码</td>
+									<td class="resCode"></td>
+									<td class="title" style="width:20%">资源英文名称</td>
+									<td class="resEname"></td>
+								</tr>
+								<tr>
+									<td class="title" style="width:20%">资源类型</td>
+									<td class="resType"></td>
+									<td class="title" style="width:20%">资源等级</td>
+									<td class="resLevel"></td>
+								</tr>
+								<tr>
+									<td class="title" style="width:20%">主题分类</td>
+									<td class="themeTypeName"></td>
+									<td class="title" style="width:20%">行业分类</td>
+									<td class="industryTypeName"></td>
+								</tr>
+								<tr>
+									<td class="title" style="width:20%">发布目录</td>
+									<td class="catalogName"></td>
+									<td class="title" style="width:20%">更新周期</td>
+									<td class="updateCycle"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part2 db-type">
+			<div class="tipBar">
+				<span class="text">数据项信息</span>
+				<span class="triangle-right"></span>
+				<div class="ui-page-content">
+					<div class="ui-page-box-content">
+						<table class="ui-grid-wire">
+							<thead>
+								<tr>
+									<th>数据项名称</th>
+									<th>数据项英文名称</th>
+									<th>数据项编码</th>
+									<th>数据项类型</th>
+									<th>数据项长度</th>
+									<th>数据元标识</th>
+								</tr>
+							</thead>
+							<tbody class="db-tbody">
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part2 api-type">
+			<div class="tipBar">
+				<span class="text">请求参数</span>
+				<span class="triangle-right"></span>
+				<div class="ui-page-content">
+					<div class="ui-page-box-content">
+						<table class="ui-grid-wire">
+							<thead>
+								<tr>			
+									<th>参数名称</th>
+									<th>参数类型</th>
+									<th>是否必填</th>
+									<th>说明</th>
+								</tr>
+							</thead>
+							<tbody class="in-tbody">
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part2 api-type">
+			<div class="tipBar">
+				<span class="text">返回参数</span>
+				<span class="triangle-right"></span>
+				<div class="ui-page-content">
+					<div class="ui-page-box-content">
+						<table class="ui-grid-wire">
+							<thead>
+								<tr>			
+									<th>参数名称</th>
+									<th>参数类型</th>
+									<th>是否可为空</th>
+									<th>说明</th>
+								</tr>
+							</thead>
+							<tbody class="out-tbody">
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>			
+	
+</div>
+<script>
+	require(["app/catalogManage/catalog_detail"],function(app){
+		app.main();
+	});
+</script>

@@ -1,0 +1,46 @@
+<div class="ui-content">
+		
+		<div class="ui-grid-buttonbar">
+			<ul class="ui-grid-buttonGroup left">
+				<li><button class="btn btn-link add"><i class="fa fa-plus"></i><span>新增</span></button></li>
+				<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+				<li><button class="btn btn-link modify disabled"><i class="fa fa-edit"></i><span>修改</span></button></li>
+			</ul>
+			<ul class="ui-grid-buttonGroup right">
+				<li><button class="btn btn-link import"><i class="fa fa-download"></i><span>导入</span></button></li>
+				<li><button class="btn btn-link export"><i class="fa fa-upload"></i><span>导出</span></button></li>
+			</ul>
+		</div>
+		
+		<div class="ui-gridbar">
+			<table id="example" class="ui-grid" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th><input type="checkbox" id="cball"/></th>
+						<th>字典项</th>
+						<th>字典编码</th>
+						<th>描述</th>
+					</tr>
+				</thead>
+			</table>
+			
+			<!--<table id="tb" class="treetable">
+			  <tr data-tt-id="1">
+			    <td>Parent</td>
+			  </tr>
+			  <tr data-tt-id="2" data-tt-parent-id="1">
+			    <td>Child</td>
+			  </tr>
+			  <tr data-tt-id="3" data-tt-parent-id="2">
+			    <td>Child</td>
+			  </tr>
+			</table>-->
+		</div>
+		
+</div>
+
+<script>
+	require(["app/example/treetableApp"],function(app){
+		app.main();
+	});
+</script>

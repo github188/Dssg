@@ -1,0 +1,33 @@
+<form id="form" class="ui-form" role="form">
+		<div class="ui-page-box-content">
+			<div class="ui-page-content">
+				<table class="ui-grid-wire">
+					<tbody>
+						<tr>
+							<td class="title" style="width:40%"><span class="required"></span>单位名称</td>
+							<td>
+									<input type="text" name="name" class="form-control" placeholder="请输入单位名称" role="{required:true,length:50}" id="name"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:40%"><span class="required"></span>单位编码</td>
+							<td>
+								<input type="text" name="code" class="form-control" placeholder="请输入单位编码" role="{required:true,length:50}" id="code"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title" style="width:40%">备注</td>
+							<td>
+								<input type="text" name="description" class="form-control" placeholder="请输入备注" id="description" role="{length:200}"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	</div>
+</form>
+<script>
+	require(["app/cdmaEvdoManage/unitManage_add"],function(app){
+		app.main();
+	});
+</script>

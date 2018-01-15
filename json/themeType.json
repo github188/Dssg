@@ -1,0 +1,21 @@
+{
+ "code":"0",
+ "data":{
+ 	"themeType":[
+ 		{
+ 			"children":[],
+ 			"key":"41e5b9faef2e40f3aa7c295980a81524",
+ 			"label":"主题分类1",
+ 			"value":"41e5b9faef2e40f3aa7c295980a81524"
+ 		},
+ 		{
+ 			"children":[],
+ 			"key":"af4e812565784217bd1db4144e05a30d",
+ 			"label":"空间地理",
+ 			"value":"af4e812565784217bd1db4144e05a30d"
+ 		}
+ 	]
+ },
+ "message":"success",
+ "success":true
+}

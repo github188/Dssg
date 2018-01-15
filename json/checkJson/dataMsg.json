@@ -1,0 +1,15 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data":[
+		{
+			"id":"1",
+			"name":"姓名",
+			"englishName":"xm",
+			"code":"de00089",
+			"type":"文本",
+			"length":"20",
+			"sign":"de0009"
+		}
+	]
+}

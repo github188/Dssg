@@ -1,0 +1,28 @@
+<form id="form" class="ui-form" role="form">
+	<div class="ui-page-box-content">
+		<div class="ui-page-content">
+			<table class="ui-grid-wire">
+				<tbody>
+					<tr>
+						<td class="title" style="width:40%"><span class="required"></span>角色名</td>
+						<td>
+							<input type="text" name="name" class="form-control" placeholder="请输入角色名" role="{required:true,length:'50'}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="title" style="width:40%"><span class="required"></span>角色码</td>
+						<td>
+							<input type="text" name="code" class="form-control" placeholder="请输入角色码" role="{required:true,first:'ROLE_',length:'50'}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="title" style="width:40%">描述</td>
+						<td>
+							<textarea type="text" name="description" class="form-control" placeholder="请输入描述.." rows="4" style="width: 100%;" role="{length:500}"></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</form>

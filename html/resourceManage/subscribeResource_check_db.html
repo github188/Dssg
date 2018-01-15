@@ -1,0 +1,258 @@
+<div class="res-check-common db">
+	<div class="ui-box">
+		<div class="ui-steps blue" id="ui-steps" style="width:1020px;"></div>
+	</div>
+	<div id="content1" class="hidden ui-gridbar">
+	<!--订阅申请信息-->
+		<div class="tipBar">
+			<span class="text">订阅申请信息</span>
+			<span class="triangle-right"></span>
+		</div>
+		<table class="ui-grid-wire" id="applyMsg" cellspacing="0" width="100%" style="width: 93%;margin: 0 auto;">
+			<tbody>
+				<tr>
+					<td class="title">申请单位</td><td class="company"></td>
+					<td class="title">订阅设备</td><td class="equipmentName"></td>
+				</tr>
+				<tr>
+					<td class="title">联系人</td><td class="linkMan"></td>
+					<td class="title">联系电话</td><td class="phone"></td>
+				</tr>
+				<tr>
+					<td class="title">申请原因</td><td class="applyReason"></td>
+					<td class="title">订阅方式</td><td class="model"></td>
+				</tr>
+				<tr>
+					<td class="title">资源类型</td><td class="resType"></td>
+					<td class="title">申请订阅时间</td><td class="applyTime"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="content2" class="hidden">
+		<div class="part1">
+			<div class="tipBar">
+				<span class="text">元数据信息</span>
+				<span class="triangle-right"></span>
+			</div>
+			<div class="ui-page-content">
+				<div class="ui-page-box-content" style="width:15%;text-align:center">
+					<img src="../images/user_default.png" class="ui-page-headingImage"/>
+					<!--<div class="ui-starbar">*****</div>
+					<div>综合评分4.9分</div>-->
+				</div>
+				<div class="ui-page-box-content" style="width:80%">
+					<div class="ui-page-title">
+						<span class="resName"></span>
+					</div>
+					<div class="ui-page-content abstracts"></div>
+					<div>
+						<table class="ui-grid-wire" id="resMsg"  cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="title" style="width:20%">资源编码</td>
+									<td class="resCode"></td>
+									<td class="title" style="width:20%">资源英文名称</td>
+									<td class="resEname"></td>
+								</tr>
+								<tr>
+									<td class="title" style="width:20%">资源类型</td>
+									<td class="resType"></td>
+									<td class="title" style="width:20%">资源等级</td>
+									<td class="resLevel"></td>
+								</tr>
+								<tr>
+									<td class="title" style="width:20%">主题分类</td>
+									<td class="themeTypeName"></td>
+									<td class="title" style="width:20%">行业分类</td>
+									<td class="industryTypeName"></td>
+								</tr>
+								<tr>
+									<td class="title" style="width:20%">发布目录</td>
+									<td class="catalogName"></td>
+									<td class="title" style="width:20%">更新周期</td>
+									<td class="updateCycle"></td>
+								</tr>
+								<!--<tr>
+									<td class="title" style="width:20%">发布时间</td>
+									<td class="publishTime"></td>
+									<td class="title" style="width:20%">最后更新时间</td>
+									<td class="lastUpdateTime"></td>
+								</tr>-->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="part2">
+			<div class="tipBar">
+				<span class="text">数据项信息</span>
+				<span class="triangle-right"></span>
+				<div class="ui-page-content">
+					<div class="ui-page-box-content">
+						<table class="ui-grid-wire" id="dataMsg" style="width:93%;margin:0 auto">
+							<thead>
+								<tr>
+									<th></th>
+									<th>数据项名称</th>
+									<th>数据项英文名称</th>
+									<th>数据项编码</th>
+									<th>数据项类型</th>
+									<th>数据项长度</th>
+									<th>数据源标识</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div id="content3" class="hidden checkRes">
+		<form class="ui-form" id="step2" role="form">
+			<div class="part1 mb-25">
+				<div style="clear:both;position:relative;height: 35px;margin-bottom:15px">
+					<div class="tipBar mb-0" style="border-bottom:0;">
+						<span class="text">敏感词过滤</span>
+						<span class="triangle-right"></span>
+					</div>
+					<div style="float:right;position:absolute;right:0;top: -5px;z-index:9999">
+						<a class="btn btn-default add" data-key="1">添加</a>
+					</div>
+				</div>
+				<div>
+					<table class="ui-grid-wire" id="sensitive_word_filter" width="100%"  style="width:97%;margin-left:3%;">
+						<thead>
+							<tr>
+								<th>资源名称</th>
+								<th>数据项名称</th>
+								<th>数据项类型</th>
+								<th>字段名称</th>
+								<th>策略名称</th>
+								<th>内容</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+					</table>
+					<div style="margin-left:3%;">敏感词过滤规则即满足策略条件的数据过滤过去，不做交换或者数据开放服务。</div>
+				</div>
+			</div>
+			<div class="part2 mb-25">
+				<div style="clear:both;position:relative;height: 35px;margin-bottom:15px">
+					<div class="tipBar mb-0" style="border-bottom:0;">
+						<span class="text">数据过滤</span>
+						<span class="triangle-right"></span>
+					</div>
+					<div style="float:right;position:absolute;right:0;top: -5px;z-index:9999">
+						<a class="btn btn-default add" data-key="2">添加</a>
+					</div>
+				</div>
+				<div>
+					<table class="ui-grid-wire" id="data_filter" width="100%"  style="width:97%;margin-left:3%;">
+						<thead>
+							<tr>
+								<th>资源名称</th>
+								<th>数据项名称</th>
+								<th>数据项类型</th>
+								<th>字段名称</th>
+								<th>比较符</th>
+								<th>比较值</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+					</table>
+					<div style="margin-left:3%;">数据过滤规则即满足比较符合条件的数据筛选出来，提供交换或者数据开放服务。</div>
+				</div>
+			</div>
+			<div class="part3 mb-25">
+				<div style="clear:both;position:relative;height: 35px;margin-bottom:15px">
+					<div class="tipBar mb-0" style="border-bottom:0;">
+						<span class="text">数据脱敏</span>
+						<span class="triangle-right"></span>
+					</div>
+					<div style="float:right;position:absolute;right:0;top: -5px;z-index:9999">
+						<a class="btn btn-default add" data-key="3">添加</a>
+					</div>
+				</div>
+				<div>
+					<!--<button class="btn btn-link  add" data-key="3"><i class="fa fa-plus"></i><span>新增</span></button>-->
+					<table class="ui-grid-wire" id="data_desensitization" width="100%" style="width:97%;margin-left:3%;">
+						<thead>
+							<tr>
+								<th style="width:14%;">资源名称</th>
+								<th style="width:14%;">数据项名称</th>
+								<th style="width:14%;">数据项类型</th>
+								<th style="width:14%;">字段名称</th>
+								<th style="width:30%;">展示规则</th>
+								<th style="width:14%;">操作</th>
+							</tr>
+						</thead>
+					</table>
+					<div style="margin-left:3%;">数据脱敏规则即满足展示规则条件的数据做数据脱敏。</div>
+				</div>
+			</div>
+			<div class="part4 mb-25">
+			<div style="clear:both;position:relative;height: 35px;margin-bottom:15px">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">数据转换</span>
+					<span class="triangle-right"></span>
+				</div>
+				<div style="float:right;position:absolute;right:0;top: -5px;z-index:9999">
+					<a class="btn btn-default add" data-key="4">添加</a>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire" id="data_transform" width="100%" style="width:97%;margin-left:3%;">
+					<thead>
+						<tr>
+							<th style="width:15%;">资源名称</th>
+							<th style="width:15%;">数据项名称</th>
+							<th style="width:15%;">数据项类型</th>
+							<th style="width:15%;">字段名称</th>
+							<th style="width:15%;">内容</th>
+							<th style="width:15%;">替换为</th>
+							<th style="width:10%;">操作</th>
+						</tr>
+					</thead>
+				</table>
+				<div style="margin-left:3%;">数据转换规则即满足内容条件的数据替换成替换为的数据。</div>
+			</div>
+		</div>
+		</form>
+	</div>
+	<div id="content4" class="hidden">
+		<table id="step_table"  class="ui-grid-wire" cellspacing="0" style="width:80%;margin: 0 auto;">
+			<tbody>
+				<tr>
+					<td class="p-20" style="width:20%">审批结果</td>
+					<td class="p-20" style="width:30%">
+						<select class="form-control approvalResult" type="text" name="approvalResult">
+							<option value="0">同意订阅</option>
+							<option value="-1">拒绝订阅</option>
+						</select>
+					</td>
+					<td class="p-20" style="width:20%">审批意见</td>
+					<td class="p-20" style="width:30%">
+						<input class="form-control approvalOpinion">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script>
+	var grid=null, grid1=null, grid2=null, grid3=null, grid4=null;
+	if(localStorage.getItem("localStorageMsg")=="1"){
+		require(["app/resourceManage/subscribeResource-check-db",],function(app){
+			app.main();
+		})
+	}else{
+		require(["app/resourceManage/subscribeExamineModify/subscribeExamine-check-db"],function(app){
+		    app.main();
+	})
+	}
+	
+</script>

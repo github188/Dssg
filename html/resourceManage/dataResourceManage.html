@@ -1,0 +1,41 @@
+<!--表格搜索区域-->
+<div class="ui-searchbar" style="height:60px;">
+	<form class="ui-searchbar-form form-inline" id="search-form">
+		  <div class="form-group">
+		    <label for="name">数据源名称</label>
+		    <input type="text" name="name" class="form-control" placeholder="请输入数据源名称">
+		  </div>
+	</form>
+	<div class="ui-searchbar-buttonbar">
+		<button class="btn btn-info" id="search">查询</button>
+		<button class="btn btn-warning" id="reset">重置</button>
+	</div>
+</div>
+<div class="ui-content" style="top:70px;">
+	<div class="ui-grid-buttonbar">
+		<ul class="ui-grid-buttonGroup left">
+			<li><button class="btn btn-link add"><i class="fa fa-plus"></i><span>新增</span></button></li>
+			<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+			<li><button class="btn btn-link modify disabled"><i class="fa fa-pencil"></i><span>修改</span></button></li>
+		</ul>
+	</div>
+	<div class="ui-gridbar">
+		<table id="example" class="ui-grid" cellspacing="0" width="100%">
+			<thead>
+				<tr>					
+					<th><input type="checkbox" id="cball"/></th>
+					<th>数据源名称</th>
+					<th>IP地址</th>
+					<th>端口</th>
+					<th>数据源类型</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<input type="hidden" id="isUse" />
+<script>
+	require(["app/resourceManage/dataResourceManage"],function(app){
+		app.main();
+	});
+</script>

@@ -1,0 +1,16 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data":[
+		{
+			"id":"1",
+			"ApiService":"第三方webservice001_民政厅DSSG",
+			"type":"数据库",
+			"equipment":"数据库",
+			"current":"异常",
+			"reqTime":"",
+			"maxReqTimes":"",
+			"todayReqTimes":""
+		}
+	]
+}

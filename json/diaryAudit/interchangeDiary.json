@@ -1,0 +1,116 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data": [
+		{
+			"id":"1",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"2",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"3",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"4",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"5",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"6",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"7",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"8",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"9",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		},
+		{
+			"id":"10",
+			"assignmentName":"编目管理",
+			"resourceType":"登录",
+			"extractNum":"18",
+			"loadingNum":"192",
+			"interchangeContent":"DSSG",
+			"startTime":"2017-08-17 13:21:25",
+			"endTime":"2017-08-17 13:21:25",
+			"operateFruit":"成功"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data":[
+		{
+			"id":1,
+			"name":"策略1",
+			"content":"江泽民",
+			"description":"名人姓名"
+		},
+		{
+			"id":2,
+			"name":"策略2",
+			"content":"习近平",
+			"description":"名人姓名"
+		}
+	]
+}

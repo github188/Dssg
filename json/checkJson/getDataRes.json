@@ -1,0 +1,13 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data":[
+			{
+				"id":"1",
+				"name":"人口管理系统",
+				"ip":"192.168.30.56",
+				"port":"8080",
+				"type":"文本"
+			}
+	]
+}

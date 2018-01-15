@@ -1,0 +1,57 @@
+{
+	"success": true,
+	"code": "0",
+	"message": "success",
+	"data": [
+		{
+			"createTime": null,
+			"model": null,
+			"value": null,
+			"type": null,
+			"requestTime": null,
+			"timeInterval": null,
+			"dateFormat": null,
+			"timeAxis": null,
+			"inputValueAxis": null,
+			"outputValueAxis": null,
+			"timeAxiss": [
+				"15:46:16",
+				"15:46:26",
+				"15:46:36",
+				"15:46:46",
+				"15:46:56",
+				"15:47:06",
+				"15:47:16",
+				"15:47:26",
+				"15:47:36",
+				"15:47:46"
+			],
+			"inputValueAxiss": [
+				"10538",
+				"14629",
+				"15072",
+				"14976",
+				"13862",
+				"12323",
+				"14520",
+				"13738",
+				"17503",
+				"17093"
+			],
+			"outputValueAxiss": [
+				"13453",
+				"13940",
+				"13937",
+				"11941",
+				"13447",
+				"12563",
+				"13885",
+				"25161",
+				"19494",
+				"16942"
+			],
+			"recycleFlag": false,
+			"linux": false
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"data":[
+			{
+				"id":"1",
+				"fileName":"2016年XXXX行政处罚信息",
+				"fileType":"doc",
+				"fileSize":"32kb"
+			},
+			{
+				"id":"2",
+				"fileName":"2016年XXXX行政处罚信息",
+				"fileType":"rar",
+				"fileSize":"32kb"
+			},
+			{
+				"id":"3",
+				"fileName":"2016年XXXX行政处罚信息",
+				"fileType":"rar",
+				"fileSize":"32kb"
+			}
+		]
+}

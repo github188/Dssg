@@ -1,0 +1,125 @@
+<style type="text/css">
+	table td{
+		width: 25% !important;
+	}
+</style>
+<div class="res-check-common" apiOption="">
+	<div class="ui-box">
+		<div class="ui-steps blue" id="ui-steps" style="width:900px;"></div>
+	</div>
+	<div id="content1" class="hidden">
+		<div class="part1 mb-25">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">接口方式</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire serviceType" >
+					<tr>
+						<td class="title" ><span class="required"></span>服务类型</td>
+						<td >
+							<select name="" id="" class="form-control switchInterface">
+								<option value="webservice">webservice</option>
+								<option value="rest">rest</option>
+							</select>
+						</td>
+						<td class="title" ><span class="required"></span>接口URL</td>
+						<td class="interfaceAddress" ><input type="text"  role="{required:true}" class="form-control checkServies"/></td>
+					</tr>
+					<tr class="">
+						<td class="title switchFunc"><span class="required"></span>方法</td>
+						<td class="interfaceMethod switchFunc">
+							<select name="" id="interfaceMethod" class="form-control" role="{required:true}">
+							</select>
+						</td>
+						<td class="title interfaceDoc"><span class="required"></span>接口文档</td>
+						<td class="interfaceDoc">
+							<div class="ui-form-inputGroup check_button_group">
+								<button class="btn btn-info" onclick="return false" id="imageBtn"><i class="fa fa-folder-open" style="margin-right:4px;"></i>选择...</button>
+								<span class="apiDocId" style="display: inline-block;"></span>
+								<form  id="uploadForm" enctype="multipart/form-data">				
+									<input name="file" style="display:none" class="form-control file" type="file" role="{required:true,fileSize:1024}">
+								</form>
+							</div>
+						</td>
+						<td class="title showTd" style="display: none;"  ></td>
+						<td class="showTd" style="display: none;"  ></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="content2" class="hidden">
+		<div class="part1 mb-25">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">查看编目申请</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire sensitive_word_filter" >
+					<tr>
+						<td class="title" >编目单位</td>
+						<td class="companyName" ></td>
+						<td class="title" >编目节点</td>
+						<td class="equipmentName" ></td>
+					</tr>
+					<tr>
+						<td class="title">联系人</td>
+						<td class="linkman"></td>
+						<td class="title">类型电话</td>
+						<td class="phone"></td>
+					</tr>
+					<tr>
+						<td class="title">资源域</td>
+						<td class="doMainName"></td>
+						<td class="title">资源目录</td>
+						<td class="catalogName"></td>
+					</tr>
+					<tr>
+						<td class="title">资源类型</td>
+						<td class="resType"></td>
+						<td class="title">提交审批时间</td>
+						<td class="subAuditTime"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="part1 mb-25">
+			<div style="clear:both;position:relative">
+				<div class="tipBar mb-0" style="border-bottom:0;">
+					<span class="text">接口地址信息</span>
+					<span class="triangle-right"></span>
+				</div>
+			</div>
+			<div>
+				<table class="ui-grid-wire showDetail" >
+					<tr>
+						<td class="title"  >服务类型</td>
+						<td class="interfaceType"  >webservice</td>
+						<td class="title" >接口地址</td>
+						<td class="interfaceAddress"  >http://ip:port/services/res?wsdl</td>
+					</tr>
+					<tr	class="">
+						<td class="title switchFunc">方法</td>
+						<td class="interfaceMethod switchFunc">GET,POST</td>
+						<td class="title ">接口文档</td>
+						<td class="interfaceDoc"></td>
+						<td class="title showTd" style="display: none;"  ></td>
+						<td class="showTd" style="display: none;"  ></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<input type="text"  class="hidden apiSaveOption"/>
+</div>
+
+<script>
+	require(["app/resourceManage/publishResource/publishResource-publish-api3"],function(app){
+		app.main();
+	})
+</script>

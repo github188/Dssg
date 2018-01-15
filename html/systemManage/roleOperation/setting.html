@@ -1,0 +1,18 @@
+<style>
+	#set-setting>li{
+		float: left;
+	    width: 25%;
+	    min-height: 150px;
+	}
+	
+</style>
+<form id="form" class="ui-form" role="form">
+	<div class="form-group col-md-12">
+	    <label for="roleName">角色名</label>
+	    <div class="ui-form-inputGroup">
+		    <input type="text" name="roleName" class="form-control" placeholder="请输入角色名" role="{required:true,length:'50'}"/>
+	    </div>
+	    <span class="required"></span>
+	</div>
+	<div id="set-setting" class="ztree ui-treebar"></div>
+</form>

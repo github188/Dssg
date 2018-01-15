@@ -1,0 +1,94 @@
+
+	
+	<div class="ui-box-abs left" style="height:50%;top:0;">
+		<div class="ui-panel">
+			<div class="ui-panel-header border">
+				<div class="ui-panel-label">
+					<i class="fa fa-line-chart"></i>
+					<span>实时流量</span>
+				</div>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-chartbar" id="chart1">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui-box-abs right" style="height:50%;top:0">
+		<div class="ui-panel">
+			<div class="ui-panel-header border">
+				<div class="ui-panel-label">
+					<i class="fa fa-pie-chart"></i>
+					<span>订阅设备TOP5</span>
+				</div>
+				<ul class="ui-panel-buttonbar" id="p2">
+					<li class="active" type="today">今日</li>
+					<li type="week">本周</li>
+				</ul>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-chartbar" id="chart2">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui-box-abs left" style="height:50%;top:50%;">
+		<div class="ui-panel">
+			<div class="ui-panel-header border">
+				<div class="ui-panel-label">
+					<i class="fa fa-thumbs-o-up"></i>
+					<span>最热发布资源TOP5</span>
+				</div>
+				<ul class="ui-panel-buttonbar" id="p3">
+					<li class="active" type="today">今日</li>
+					<li type="week">本周</li>
+				</ul>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-grid-buttonbar">
+					<ul class="ui-grid-linkGroup" id="grid_status">
+						<li class="active" key="0">全部</li>
+						<li key="1">待发布</li>
+						<li key="2">已发布</li>
+						<li key="3">已撤销</li>
+					</ul>
+				</div>
+				<div class="ui-panel-gridbar">
+					<table id="example" class="ui-grid display" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th>资源名称</th>
+								<th>热度</th>
+								<th>订阅设备数</th>
+								<th>抽取记录数</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui-box-abs right" style="height:50%;top:50%;">
+		<div class="ui-panel">
+			<div class="ui-panel-header border">
+				<div class="ui-panel-label">
+					<i class="fa fa-adjust"></i>
+					<span>设备占用率</span>
+				</div>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-chartbar" id="chart3" style="margin-top:-20px;"></div>
+			</div>
+		</div>
+	</div>
+
+<script>
+	require(["app/example/chartListApp"],function(app){
+		app.main();
+	});
+</script>

@@ -1,0 +1,21 @@
+<div style="padding: 20px;">
+	<table id="viewTable" class="ui-grid display" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>资源名称</th>
+					<th>数据来源</th>
+					<th>申请时间</th>
+					<th>请求时段</th>
+					<th>每日最大请求次数</th>
+					<th>结果最大返回条数</th>
+					<th>状态</th>
+				</tr>
+			</thead>
+	</table>
+</div>
+
+<script>
+	require(["app/resourceManage/apiApplication/apiApp_view"],function(app){
+		app.main();
+	});
+</script>

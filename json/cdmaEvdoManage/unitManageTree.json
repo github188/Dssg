@@ -1,0 +1,24 @@
+[
+	{ "id":1, "pId":0, "name":"全部单位", "open":true,"open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":2, "pId":1, "name":"江苏省人事社保局","open":true,"open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":3, "pId":2, "name":"行政部", "icon":"../images/4.png"},
+	{ "id":4, "pId":1, "name":"江苏省飞博VIP", "open":true,"open":true,"iconOpen":"../images/2.png", "iconClose":"../images/1.png"},
+	{ "id":5, "pId":4, "name":"飞博二部","icon":"../images/4.png"},
+	{ "id":6, "pId":1, "name":"江苏省民政厅", "open":true,"icon":"../images/4.png"},
+	{ "id":10, "pId":1, "name":"江苏省公安厅","open":true,"icon":"../images/4.png"}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

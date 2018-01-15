@@ -1,0 +1,20 @@
+{
+	"recordsTotal": 57,
+	"recordsFiltered": 57,
+	"data":[
+		{
+			"id":1,
+			"name":"XXX系统人口查询应用",
+			"summary":"XXX",
+			"ip":"XXX",
+			"app_token":"111"
+		},
+		{
+			"id":2,
+			"name":"实名验证应用",
+			"summary":"XXX",
+			"ip":"XXX",
+			"app_token":"111"
+		}
+	]
+}
